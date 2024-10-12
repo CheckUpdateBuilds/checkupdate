@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import companyLogo from './assets/logo0.svg'
+import companyLogo from '../public/logo0.svg'
 import './App.css'
 // import 
 

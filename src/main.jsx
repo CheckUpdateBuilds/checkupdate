@@ -7,12 +7,22 @@ import { BrowserRouter } from 'react-router-dom';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
-const basename = window.location.pathname.split('/')[1]; // Get the current URL path
+// const basename = window.location.pathname.split('/')[1]; // Get the current URL path
+// const basename = process.env.PUBLIC_URL;
 
 root.render(
   <StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>,
 );
+
+
+// root.render(
+//   <StrictMode>
+//     <BrowserRouter basename={basename}>
+//       <App />
+//     </BrowserRouter>
+//   </StrictMode>,
+// );
