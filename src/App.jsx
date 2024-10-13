@@ -14,7 +14,7 @@ function App() {
     <>
       <div className="container">
         {/* <img src={companyLogo} alt="Company Logo" width="200px" height="auto" /> */}
-        <img src='./src/assets/logo0.svg' alt="Company Logo" />
+        <img src='logo0.svg' alt="Company Logo" />
         <p>Coming Soon...</p>
         <p>{count}</p>
         <button onClick={countDown}>Click Me!</button>
