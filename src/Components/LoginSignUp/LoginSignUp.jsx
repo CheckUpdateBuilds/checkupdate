@@ -1,4 +1,4 @@
-// import React from 'react'
+import { useRef } from 'react'
 import './LoginSignUp.css'
 import companyLogo from '../Assets/logo1.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,6 +6,18 @@ import { faApple, faFacebook, faGoogle, faXTwitter,  } from '@fortawesome/free-b
 
 
 const LoginSignUp = () => {
+    const emailref = useRef(null);
+
+    const handleEmailSubmit = (event) => {
+      event.preventDefault();
+      const email = emailref.current.value;
+      localStorage.setItem('userEmail', email);
+      // alert('Email saved!');
+      window.location.href = '#';
+    };
+
+
+
   return (
     <>
       <div className="container-fluid p-0 m-0">
@@ -33,7 +45,7 @@ const LoginSignUp = () => {
               <FontAwesomeIcon className='iconMe3' icon={faXTwitter} /> Continue with X
             </a>
             <a className="btn btn-custom btn-apple" href="#">
-              <FontAwesomeIcon className='iconMe4' icon={faApple} /> Continue with Apple
+              <FontAwesomeIcon className='iconMe4' icon={faApple} />        Continue with Apple
             </a>
           </div>
 
@@ -42,7 +54,7 @@ const LoginSignUp = () => {
           </div>
 
           {/* Don't forget to add a function that collects this email */}
-          <input className='form-control email-input' placeholder='Enter your email address' type="email" />
+          <input className='form-control email-input' placeholder='Enter your email address' type="email" ref={emailref} />
 
           <div className="terms">
             By continuing, you agree to the
@@ -55,7 +67,7 @@ const LoginSignUp = () => {
             </a>
           </div>
 
-          <button className='btn continue-btn'>Continue</button>
+          <button className='btn continue-btn' onClick={handleEmailSubmit}>Continue</button>
         </div>
       </div>
     </>
