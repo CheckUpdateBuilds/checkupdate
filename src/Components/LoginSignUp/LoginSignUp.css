@@ -139,3 +139,25 @@ body {
 .continue-btn:hover {
     background-color: #B22727 !important;
 }
+
+.social-buttons {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.iconMe1 {
+    margin-left: -15px !important;
+}
+
+.iconMe2 {
+    margin-left: 2px !important;
+}
+
+.iconMe3 {
+    margin-left: -55px !important;
+}
+
+.iconMe4 {
+    margin-left: -25px !important;
+}

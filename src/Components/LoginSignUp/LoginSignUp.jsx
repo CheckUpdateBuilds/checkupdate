@@ -1,7 +1,9 @@
 // import React from 'react'
 import './LoginSignUp.css'
-
 import companyLogo from '../Assets/logo1.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faApple, faFacebook, faGoogle, faXTwitter,  } from '@fortawesome/free-brands-svg-icons'
+
 
 const LoginSignUp = () => {
   return (
@@ -15,26 +17,25 @@ const LoginSignUp = () => {
           </div>
         </div>
 
+
         <div className="container pt-5">
           <h2>
             Log in or sign up to enhance your CheckUpdate experience.
           </h2>
-          <a className="btn btn-custom btn-google mt-5" href="#">
-            <i className="fab fa-google">
-            </i> Continue with Google
-          </a>
-          <a className="btn btn-custom btn-facebook" href="#">
-            <i className="fab fa-facebook-f">
-            </i> Continue with Facebook
-          </a>
-          <a className="btn btn-custom btn-google" href="#">
-            <i className="fab fa-twitter">
-            </i> Continue with X
-          </a>
-          <a className="btn btn-custom btn-google" href="#">
-            <i className="fab fa-apple">
-            </i> Continue with Apple
-          </a>
+          <div className="social-buttons">
+            <a className="btn btn-custom btn-google mt-5" href="#">
+            <FontAwesomeIcon className='iconMe1' icon={faGoogle} style={{color: "#d30909",}} /> Continue with Google
+            </a>
+            <a className="btn btn-custom btn-facebook" href="#" aria-label='Continue with Facebook'>
+            <FontAwesomeIcon className='iconMe2' icon={faFacebook} style={{ color: '#0a64a9' }}/> Continue with Facebook
+            </a>
+            <a className="btn btn-custom btn-x" href="#">
+              <FontAwesomeIcon className='iconMe3' icon={faXTwitter} /> Continue with X
+            </a>
+            <a className="btn btn-custom btn-apple" href="#">
+              <FontAwesomeIcon className='iconMe4' icon={faApple} /> Continue with Apple
+            </a>
+          </div>
 
           <div className="divider">
             Or sign in with your email address
