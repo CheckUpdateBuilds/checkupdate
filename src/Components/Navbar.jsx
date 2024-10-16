@@ -13,7 +13,7 @@ const Navbar = () => {
           <a className="navbar-brand logo-move" href="#"><img src={companyLogo} alt="CheckUpdate Logo" style={{ width: '150px' }} /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             {/* <span className="navbar-toggler-icon"></span> */}
-            {/* <FontAwesomeIcon icon={faBarsProgress} style={{ color: 'white' }} /> */}
+            <FontAwesomeIcon icon={faBarsProgress} style={{ color: 'white' }} />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <form className="d-flex ms-auto">

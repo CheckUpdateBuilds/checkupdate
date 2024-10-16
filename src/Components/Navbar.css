@@ -56,8 +56,11 @@ body {
     color: white;
 }
 
-.button-loc {
+.footer {
+    background-color: black;
+    /* max-height: max-content; */
+    height: 190px;
+    /* border: 1px solid #C43737; */
     /* position: absolute; */
-    /* top: -10%; */
-    /* right: %; */
+    /* bottom: 10%; */
 }
