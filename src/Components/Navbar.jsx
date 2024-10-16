@@ -1,48 +1,83 @@
-import React from 'react'
+// import React from 'react'
+import './Navbar.css'
+import companyLogo from '../assets/logo2.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBarsProgress, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <>
+      <nav className="navbar navbar-expand-sm navigate">
+        <div className="container-fluid">
+          <a className="navbar-brand logo-move" href="#"><img src={companyLogo} alt="CheckUpdate Logo" style={{ width: '150px' }} /></a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {/* <span className="navbar-toggler-icon"></span> */}
+            {/* <FontAwesomeIcon icon={faBarsProgress} style={{ color: 'white' }} /> */}
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <form className="d-flex ms-auto">
+              <div className="input-group search-bar">
+                <span className="input-group-text rounded-start-pill border-right-0 search-see"><FontAwesomeIcon icon={faSearch} style={{ color: 'white' }} /></span>
+                <input className="form-control border-left-0 rounded-end-pill search-input" type="search" placeholder="Search" aria-label="Search" />
+              </div>
+            </form>
 
-<div class="header py-2">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo d-flex align-items-center">
-                <img src="https://storage.googleapis.com/a1aa/image/qFiNSkIk09rsCNtVmTH8qXv2NuL2aBETxxnZ8KLvzCk2kx5E.jpg" alt="Check Update Logo">
-                <span>Check Update</span>
-            </div>
-            <div class="search-signin d-flex align-items-center">
-                <input type="text" class="form-control mr-2" placeholder="Search">
-                <button class="btn btn-light">Sign in</button>
-            </div>
+            <button className="btn btn-light rounded-pill ms-2 signin-btn">Sign in</button>
+          </div>
         </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Politics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Science & Tech</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Culture & Religion</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Earth & Wildlife</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Opportunities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">CheckUpdate Awards</a></li>
-                </ul>
+      </nav>
+
+      <nav className="navbar navbar-expand-lg navigate">
+        <div className="container-fluid">
+          <a className="navbar-brand me-auto" href="#"></a>
+          <button className="navbar-toggler button-loc" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="ms-auto">
+              <ul className="navbar-nav flex-grow-1 justify-content-end">
+                <li className="nav-item">
+                  <span className="nav-link active" aria-current="page"><Link to={'/'} style={{textDecoration:'none', color:'white'}}>News</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/sports'} style={{textDecoration:'none', color:'white'}}>Sports</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/entertainment'} style={{textDecoration:'none', color:'white'}}>Entertainment</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/education'} style={{textDecoration:'none', color:'white'}}>Education</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/lifestyle'} style={{textDecoration:'none', color:'white'}}>Lifestyle</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/politics'} style={{textDecoration:'none', color:'white'}}>Politics</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/business'} style={{textDecoration:'none', color:'white'}}>Business</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/science'} style={{textDecoration:'none', color:'white'}}>Science & Tech</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/culture'} style={{textDecoration:'none', color:'white'}}>Culture & Religion</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/earth'} style={{textDecoration:'none', color:'white'}}>Earth & Wildlife</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/opportunities'} style={{textDecoration:'none', color:'white'}}>Opportunities</Link></span>
+                </li>
+                <li className="nav-item">
+                  <span className="nav-link"><Link to={'/awards'} style={{textDecoration:'none', color:'white'}}>CheckUpdate Awards</Link></span>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-    </nav>
-    
-    
-    
-    
+      </nav>
     </>
   )
 }

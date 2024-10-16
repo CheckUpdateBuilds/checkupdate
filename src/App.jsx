@@ -30,13 +30,13 @@ function App() {
         <Route path='/sports' element={<Sports/>} />
         <Route path='/entertainment' element={<Entertainment/>} />
         <Route path='/education' element={<Education/>} />
-        <Route path='/lifestye' element={<Lifestyle/>} />
+        <Route path='/lifestyle' element={<Lifestyle/>} />
         <Route path='/politics' element={<Politics/>} />
         <Route path='/business' element={<Business/>} />
         <Route path='/science' element={<ScienceTech/>} />
         <Route path='/culture' element={<Culture/>} />
         <Route path='/earth' element={<Earth/>} />
-        <Route path='/opportunity' element={<Opportunities/>} />
+        <Route path='/opportunities' element={<Opportunities/>} />
         <Route path='/awards' element={<CheckUpdateAwards/>} />
         <Route path='*' element={<NotFound/>} />
         
