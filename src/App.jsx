@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css' 
+// import LoginSignUp from './Components/LoginSignUp/LoginSignUp'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './pages/Home';
 import Sports from './pages/Sports';
@@ -38,7 +39,6 @@ function App() {
         <Route path='/earth' element={<Earth/>} />
         <Route path='/opportunities' element={<Opportunities/>} />
         <Route path='/awards' element={<CheckUpdateAwards/>} />
-        {/* <Route path='/signin' element={<LoginSignUp/>} /> */}
         <Route path='*' element={<NotFound/>} />
         
       </Routes>
