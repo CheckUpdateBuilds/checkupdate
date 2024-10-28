@@ -1,0 +1,26 @@
+.card {
+    background-color: white;
+    max-width: 30rem;
+    border-radius: 20px;
+}
+
+img {
+    width: fit-content;
+    border-radius: 20px;
+    /* border-top: 20px; */
+    /* border-radius: inherit; */
+}
+
+h5 {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+h4, h6 {
+    font-size: 10px;
+}
+
+.card-text {
+    font-size: 10px !important;
+}

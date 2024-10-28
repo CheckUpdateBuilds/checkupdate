@@ -1,8 +1,13 @@
-.t-news {
-    background-color: #C43737;
+.wrapper {
+    background-color: #C43737 !important;
 }
 
 .bod {
     display: flex;
     flex-direction: row;
+}
+
+p {
+  padding-top: 10px;
+  font-size: 30px;
 }

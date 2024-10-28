@@ -12,7 +12,7 @@ body {
     background-color: #ffff;
 }
 
-.container {
+.containerAds {
     border-radius: 40px;
     align-items: center;
     justify-content: center;
@@ -20,8 +20,8 @@ body {
     /* box-shadow: 2px salmon; */
 }
 
-.container p {
-    font-size: 30px !important;
+.containerAds p {
+    font-size: 30px;
     margin-left: 20%;
     font-weight: bold;
 }
