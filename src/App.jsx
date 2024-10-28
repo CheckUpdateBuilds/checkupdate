@@ -17,6 +17,7 @@ import CheckUpdateAwards from './pages/CheckUpdateAwards'
 import NotFound from './pages/NotFound'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import Ads from './Components/Ads';
 // import LoginSignUp from './pages/LoginSignUp'
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <Navbar/>
+      <Ads/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/sports' element={<Sports/>} />
