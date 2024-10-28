@@ -1,13 +1,28 @@
-.wrapper {
-    background-color: #C43737 !important;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
-.bod {
+.wrapper {
+    background-color: #C43737 !important;
+    padding-bottom: 30px;
+}
+
+.carddy {
     display: flex;
-    flex-direction: row;
+    background-color: #C43737;
 }
 
 p {
   padding-top: 10px;
   font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .carddy {
+        display: block;
+    }
 }

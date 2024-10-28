@@ -10,13 +10,12 @@ const Home = () => {
         <div className="container text-white wrapper">
           <p>Trending News</p>
         </div>
-        
-        <div className="container d-flex gap-3 wrapper">
-          <Card title = "POLITICS" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
+        <div className="container gap-3 carddy">
+          <Card className="cad" title = "POLITICS" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/><br/>
 
-          <Card title = "SPORTS" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
+          <Card className="cad1" title = "SPORTS" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/><br/>
 
-          <Card title = "TRAVEL" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
+          <Card className="cad2" title = "TRAVEL" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
         </div>
       </div>
     </>

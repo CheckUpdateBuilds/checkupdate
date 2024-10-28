@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
 .card {
     background-color: white;
     max-width: 30rem;
@@ -7,8 +15,8 @@
 img {
     width: fit-content;
     border-radius: 20px;
-    /* border-top: 20px; */
-    /* border-radius: inherit; */
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
 }
 
 h5 {
