@@ -1,0 +1,8 @@
+.t-news {
+    background-color: #C43737;
+}
+
+.bod {
+    display: flex;
+    flex-direction: row;
+}
