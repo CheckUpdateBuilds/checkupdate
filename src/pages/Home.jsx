@@ -10,12 +10,12 @@ const Home = () => {
         <div className="top pb-5 text-white">
           Trending News
         </div>
-        <div className="row gap-4 bod">
-          <Card className="col-4 col-sm-3" title = "Politics" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
+        <div className="row gap-4">
+          <Card className="col col-4 col-sm-3" title = "Politics" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
 
-          <Card className="col-4 col-sm-3" title = "Politics" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
+          <Card className="col col-4 col-sm-3" title = "Politics" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
 
-          <Card className="col-4 col-sm-3" title = "Politics" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
+          <Card className="col col-4 col-sm-3" title = "Politics" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/>
         </div>
         
       </div>
