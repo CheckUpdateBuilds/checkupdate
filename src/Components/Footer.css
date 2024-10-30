@@ -25,3 +25,61 @@ body {
     color: white;
     text-decoration: underline;
 }
+
+.details {
+    display: flex;
+    color: white;
+}
+
+.company {
+    margin-left: 300px;
+}
+
+.pcompany {
+    font-size: 20px !important;
+    margin-left: 15px;
+}
+
+.pc01 {
+    margin-left: -10%;
+}
+
+.pc02 {
+    margin-left: 10%;
+}
+
+.pc03 {
+    margin-top: -15% !important;
+}
+
+span {
+    font-size: 15px !important;
+}
+
+.category {
+    /* display: none; */
+    border: 2px solid red;
+}
+
+.socials {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .details {
+        display: block;
+        margin: 0 250px;
+    }
+
+    .company {
+        margin: 0;
+    }
+
+    .pc01 {
+        margin-left: -10%;
+    }
+    
+    .pc02 {
+        margin-left: 5%;
+    }
+}
