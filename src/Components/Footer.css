@@ -8,17 +8,17 @@ body {
 
 .footer {
     background-color: black;
-    height: 200px;
+    /* height: 400px; */
 }
 
 .logo-move {
-    margin-left: 3%;
+    margin-left: 1%;
 }
 
 .navback {
-    position: absolute;
-    right: 1%;
-    /* top: 9%; */
+    width: 100px;
+    margin-left: 1200px;
+    margin-top: -45px;
 }
 
 .navback a {
@@ -26,60 +26,89 @@ body {
     text-decoration: underline;
 }
 
-.details {
+section {
+    /* border: 2px solid red; */
+    /* height: 300px; */
+    margin-top: 30px;
     display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    color: white;
+    font-size: 15px;
+    line-height: 250%;
+}
+
+.first {
+    /* border: 2px solid blue; */
+    height: 200px;
+    width: 500px;
+    text-align: center;
+}
+
+.first a {
+    text-decoration: none;
     color: white;
 }
 
-.company {
-    margin-left: 300px;
+.pT {
+    font-size: 20px;
+    /* text-align: center; */
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.pcompany {
-    font-size: 20px !important;
-    margin-left: 15px;
+.first .hs {
+    margin-left: 20px;
 }
 
-.pc01 {
-    margin-left: -10%;
+.second {
+    /* border: 2px solid green; */
+    height: 200px;
+    width: 800px;
+    text-align: center;
 }
 
-.pc02 {
-    margin-left: 10%;
+.edu {
+    margin-left: 40px;
 }
 
-.pc03 {
-    margin-top: -15% !important;
-}
-
-span {
-    font-size: 15px !important;
-}
-
-.category {
-    /* display: none; */
-    border: 2px solid red;
-}
-
-.socials {
-    display: none;
+.third {
+    /* border: 2px solid white; */
+    height: 200px;
+    width: 500px;
+    text-align: center;
 }
 
 @media (max-width: 800px) {
-    .details {
+    section {
         display: block;
-        margin: 0 250px;
+        font-size: 7px;
     }
 
-    .company {
-        margin: 0;
+    .edu {
+        margin-left: 20px;
+        margin-top: 10px;
     }
 
-    .pc01 {
-        margin-left: -10%;
+    .pT {
+        margin-bottom: 20px;
+        margin-top: 50px;
     }
-    
-    .pc02 {
-        margin-left: 5%;
+
+    .pt1 {
+        margin-top: 10px;
+    }
+
+    .logo-move {
+        margin-left: 8%;
+    }
+
+    .first, .second, .third {
+        height: auto;
+        width: auto;
+    }
+
+    .navback {
+        display: none;
     }
 }
