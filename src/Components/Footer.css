@@ -8,7 +8,7 @@ body {
 
 .footer {
     background-color: black;
-    /* height: 400px; */
+    height: 350px;
 }
 
 .logo-move {
@@ -27,8 +27,6 @@ body {
 }
 
 section {
-    /* border: 2px solid red; */
-    /* height: 300px; */
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -79,6 +77,10 @@ section {
     text-align: center;
 }
 
+.socialWords {
+    line-height: normal;
+}
+
 .social-logos {
     justify-content: center;
 }
@@ -93,14 +95,18 @@ section {
     color: white;
     justify-content: center;
     align-items: center;
-    margin-left: 40%;
+    margin-left: 45%;
     margin-top: 10px;
 }
 
 @media (max-width: 800px) {
+    .footer {
+        height: 610px;
+    }
+
     section {
         display: block;
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .edu {

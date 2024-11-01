@@ -90,7 +90,7 @@ const Footer = () => {
 
             <div className="third">
               <div className="pT">Our Socials</div>
-              <div className="socialWords">Connect with us on our social media platforms to enhance your performance.</div>
+              <div className="socialWords">Connect with us on our social media <br /> platforms to enhance your experience</div>
               <div className="social-logos d-flex">
                 <div className="bg-white m-1 slogo">
                   <a href="https://x.com" target="_blank">
