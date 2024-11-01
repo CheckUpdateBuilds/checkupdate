@@ -2,6 +2,9 @@
 import "./Footer.css";
 import companyLogo from '../assets/logo2.svg'
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faFacebookF, faInstagram, faLinkedin, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
 const Footer = () => {
   return (
@@ -89,34 +92,39 @@ const Footer = () => {
               <div className="pT">Our Socials</div>
               <div className="socialWords">Connect with us on our social media platforms to enhance your performance.</div>
               <div className="social-logos d-flex">
-                <div>
-                  <a href="#">
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
+                <div className="bg-white m-1 slogo">
+                  <a href="https://x.com" target="_blank">
+                    <FontAwesomeIcon icon={faXTwitter} style={{color: 'black', height: '20px'}} />
                   </a>
                 </div>
-                <div>
-                  <a href="#">
-                    <i className="fa fa-instagram" aria-hidden="true"></i>
+                <div className="bg-white m-1 slogo">
+                  <a href="https://instagram.com" target="_blank">
+                    <FontAwesomeIcon icon={faInstagram} style={{color: 'black', height: '20px'}} />
                   </a>
                 </div>
-                <div>
-                  <a href="#">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
+                <div className="bg-white m-1 slogo">
+                  <a href="https://facebook.com" target="_blank">
+                    <FontAwesomeIcon icon={faFacebookF} style={{color: 'black', height: '20px'}} />
                   </a>
                 </div>
-                <div>
-                  <a href="#">
-                    <i className="fa fa-linkedin" aria-hidden="true"></i>
+                <div className="bg-white m-1 slogo">
+                  <a href="https://www.linkedin.com/company/checkupdate-ng/" target="_blank">
+                    <FontAwesomeIcon icon={faLinkedin} style={{color: 'black', height: '20px'}} />
                   </a>
                 </div>
-                <div>
-                  <a href="#">
-                    <i className="fa fa-youtube" aria-hidden="true"></i>
+                <div className="bg-white m-1 slogo">
+                  <a href="https://youtube.com" target="_blank">
+                    <FontAwesomeIcon icon={faYoutube} style={{color: 'black', height: '20px'}} />
                   </a>
                 </div>
               </div>
             </div>
           </section>
+
+          <div className="copyright">
+            <FontAwesomeIcon icon={faCopyright} />
+             CheckUpdate 2024
+          </div>
 
           
         </div>

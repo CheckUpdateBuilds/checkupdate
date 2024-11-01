@@ -79,6 +79,24 @@ section {
     text-align: center;
 }
 
+.social-logos {
+    justify-content: center;
+}
+
+.slogo {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+.copyright {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
 @media (max-width: 800px) {
     section {
         display: block;
@@ -110,5 +128,14 @@ section {
 
     .navback {
         display: none;
+    }
+
+    .slogo {
+        padding: 5px;
+    }
+
+    .copyright {
+        margin-left: 27%;
+        margin-top: 10px;
     }
 }
