@@ -47,7 +47,7 @@ const Footer = () => {
                   <Link to={'/education'} style={{textDecoration:'none', color:'white'}}>Education</Link>
                 </span>
                 <span className="edu">
-                  <Link to={'/bubsiness'} style={{textDecoration:'none', color:'white'}}>Business</Link>
+                  <Link to={'/business'} style={{textDecoration:'none', color:'white'}}>Business</Link>
                 </span>
                 <span className="edu">
                   <Link to={'/earth'} style={{textDecoration:'none', color:'white'}}>Earth & Wildlife</Link>
