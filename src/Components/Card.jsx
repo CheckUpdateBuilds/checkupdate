@@ -1,14 +1,13 @@
-import React from 'react' 
-import img1 from "../assets/testImg1.png"
+// import React from 'react' 
 // import img2 from "../assets/testImg2.png"
 import "./Card.css"
 
 const Card = (props) => {
-    const { title, topic, desc, time} = props
+    const { title, topic, desc, time, img} = props
   return (
     <>
         <div className="card">
-          <img className="card-img-top" src={img1} alt="img" />
+          <img className="card-img-top" src={img} alt="img" />
           <h5>{title}</h5>
           <div className="card-body">
             <h4 className="card-title">{topic}</h4>
@@ -16,6 +15,7 @@ const Card = (props) => {
             <h6>{time}</h6>
           </div>
         </div>
+
 
     </>
   )

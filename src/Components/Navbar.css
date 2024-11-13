@@ -55,3 +55,7 @@ body {
     background-color: #C43737;
     color: white;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

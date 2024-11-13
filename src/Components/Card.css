@@ -9,14 +9,14 @@ body {
 .card {
     background-color: white;
     max-width: 30rem;
-    border-radius: 20px;
+    border-radius: 27px;
 }
 
 img {
     width: fit-content;
-    border-radius: 20px;
-    border-top-left-radius: 20px !important;
-    border-top-right-radius: 20px !important;
+    /* border-radius: 20px; */
+    /* border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important; */
 }
 
 h5 {
