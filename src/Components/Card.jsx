@@ -1,5 +1,4 @@
-// import React from 'react' 
-// import img2 from "../assets/testImg2.png"
+// import React from 'react'
 import "./Card.css"
 
 const Card = (props) => {

@@ -26,7 +26,7 @@ import Subscribe from './Components/Subscribe';
 function App() {
 
   return (
-    <>
+    <div className='overflow-hidden'>
       <Navbar/>
       <Ads/>
       <Routes>
@@ -51,7 +51,7 @@ function App() {
       
     
     
-    </>
+    </div>
   )
 }
 
