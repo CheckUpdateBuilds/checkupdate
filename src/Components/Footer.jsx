@@ -3,125 +3,103 @@ import "./Footer.css";
 import companyLogo from '../assets/logo2.svg'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faFacebookF, faInstagram, faLinkedin, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import { MdArrowUpward } from "react-icons/md";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <>
     
-        <div className="footer">
-          <div className="container-fluid">
-          <a className="navbar-brand logo-move" href="#"><img src={companyLogo} alt="CheckUpdate Logo" style={{ width: '100px' }} /></a>
+        <div className="bg-black h-96 font-Nunito">
+          <div className="pt-6 pl-0 md:pt-6 md:pl-9 flex justify-between">
+            <Link to={'/'} ><img className="w-[100px] " src={companyLogo} alt="CheckUpdate Logo" /></Link>
+            <a className="flex text-white underline" href="#">Back to top <MdArrowUpward className="w-6 h-6"/> </a>
           </div>
 
-          <div className="navback">
-            <a href="#">Back to top <i className="fa fa-arrow-up" aria-hidden="true"></i></a>
+          <div className="text-white underline text-right">
           </div>
 
-          <section>
-            <div className="first">
-              <p className="pT pt1">Our Company</p>
+          <section className="text-white font-Nunito block md:flex mt-4 justify-between p-1 ">
+            <div className="text-left p-2">
+              <p className="text-xl font-bold p-1 text-center">Our Company</p>
 
-              <div className="com1">
-                <span className=""><a href="#">About Us</a></span>
-                <span className="hs"><a href="#">Privacy Policy</a></span>
+              <div className="text-sm text-center">
+                <Link className="pr-3" to={'#'} >About Us</Link>
+                <Link to={'#'} >Privacy Policy</Link>
               </div>
               
-              <div className="com2">
-                <span className=""><a href="#">Help & Support</a></span>
-                <span className="hs"><a href="#">Terms of Service</a></span>
+              <div className="text-sm text-center">
+                <Link to={'#'} className="pr-3" >Help & Support</Link>
+                <Link to={'#'}  >Terms of Service</Link>
               </div>
 
-              <div className="com3">
-                <span className=""><a href="#">Contact Us</a></span> <span className="hs"><a href="#">Vacancy</a></span>
+              <div className="text-sm text-center">
+                <Link to={'#'} className="pr-3" >Contact Us</Link>
+                <Link to={'#'} >Vacancy</Link>
               </div>
             
             </div>
 
-            <div className="second">
-              <div className="pT">Category</div>
+            <div className="items-center mt-12 md:mt-0 ">
+              <div className="text-xl font-bold p-1 text-center">Category</div>
 
-              <div className="cat1">
-                <span className="">
-                  <Link to={'/'} style={{textDecoration:'none', color:'white'}}>News</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/education'} style={{textDecoration:'none', color:'white'}}>Education</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/business'} style={{textDecoration:'none', color:'white'}}>Business</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/earth'} style={{textDecoration:'none', color:'white'}}>Earth & Wildlife</Link>
-                </span>
+              <div className="block text-center md:flex">
+                <Link to={'/'} className="pr-3 mx-auto " >News</Link>
+                <Link to={'/education'} className="pr-3 mx-auto" >Education</Link>
+                <Link to={'/business'} className="pr-3 mx-auto " >Business</Link>
+                <Link to={'/earth'} className="" >Earth & Wildlife</Link>
               </div>
 
-              <div className="cat2">
-                <span className="">
-                  <Link to={'/sports'} style={{textDecoration:'none', color:'white'}}>Sports</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/lifestyle'} style={{textDecoration:'none', color:'white'}}>Lifestyle</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/science'} style={{textDecoration:'none', color:'white'}}>Science & Tech</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/opportunities'} style={{textDecoration:'none', color:'white'}}>Opportunities</Link>
-                </span>
+              <div className="text-center block md:flex mt-2">
+                <Link to={'/sports'} className="pr-3 mx-auto" >Sports</Link>
+                <Link to={'/lifestyle'} className="pr-3 mx-auto" >Lifestyle</Link>
+                <Link to={'/science'} className="pr-3 mx-auto" >Science & Tech</Link>
+                <Link to={'/opportunities'} className="mx-auto" >Opportunities</Link>
               </div>
               
-              <div className="cat3">
-                <span>
-                  <Link to={'/entertainment'} style={{textDecoration:'none', color:'white'}}>Entertainment</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/politics'} style={{textDecoration:'none', color:'white'}}>Politics</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/culture'} style={{textDecoration:'none', color:'white'}}>Culture & Religion</Link>
-                </span>
-                <span className="edu">
-                  <Link to={'/awards'} style={{textDecoration:'none', color:'white'}}>CheckUpdate Awards</Link>
-                </span>
+              <div className="text-center block md:flex mt-2">
+                <Link to={'/entertainment'} className="pr-3" >Entertainment</Link>
+                <Link to={'/politics'} className=" mr-2" >Politics</Link>
+                <Link to={'/culture'} className="mr-2" >Culture & Religion</Link>
+                <Link to={'/awards'} className="" >CheckUpdate Awards</Link>
               </div>
             </div>
 
-            <div className="third">
-              <div className="pT">Our Socials</div>
-              <div className="socialWords">Connect with us on our social media <br /> platforms to enhance your experience</div>
-              <div className="social-logos d-flex">
-                <div className="bg-white m-1 slogo">
+            <div className="text-right mt-10 md:mt-0 mr-0 md:mr-2 lg:mr-20">
+              <div className="text-xl font-bold p-1 text-center">Our Socials</div>
+              <div className="text-center">Connect with us on our social media <br className="hidden lg:block" /> platforms to enhance your experience</div>
+              <div className="flex justify-center">
+                <div className="bg-white m-1 rounded-full h-6 w-6">
                   <a href="https://x.com" target="_blank">
-                    <FontAwesomeIcon icon={faXTwitter} style={{color: 'black', height: '20px'}} />
+                    <FaXTwitter className="w-6 h-6 text-black" />
                   </a>
                 </div>
-                <div className="bg-white m-1 slogo">
-                  <a href="https://instagram.com" target="_blank">
-                    <FontAwesomeIcon icon={faInstagram} style={{color: 'black', height: '20px'}} />
+                <div className="bg-white m-1 w-6 h-6 rounded-full">
+                  <a href="https://instagram.com/checkupdate.ng" target="_blank">
+                    <FaInstagram className="w-6 h-6 text-black" />
                   </a>
                 </div>
-                <div className="bg-white m-1 slogo">
+                <div className="bg-white m-1 w-6 h-6 rounded-full">
                   <a href="https://facebook.com" target="_blank">
-                    <FontAwesomeIcon icon={faFacebookF} style={{color: 'black', height: '20px'}} />
+                    <FaFacebookF className="w-6 h-6 text-black" />
                   </a>
                 </div>
-                <div className="bg-white m-1 slogo">
+                <div className="bg-white m-1 w-6 h-6 rounded-full">
                   <a href="https://www.linkedin.com/company/checkupdate-ng/" target="_blank">
-                    <FontAwesomeIcon icon={faLinkedin} style={{color: 'black', height: '20px'}} />
+                    <FaLinkedin className="w-6 h-6 text-black" />
                   </a>
                 </div>
-                <div className="bg-white m-1 slogo">
+                <div className="bg-white m-1 w-6 h-6 rounded-full">
                   <a href="https://youtube.com" target="_blank">
-                    <FontAwesomeIcon icon={faYoutube} style={{color: 'black', height: '20px'}} />
+                    <FaYoutube className="w-6 h-6 text-black" />
                   </a>
                 </div>
               </div>
             </div>
           </section>
 
-          <div className="copyright">
+          <div className="text-white text-center mt-20">
             <FontAwesomeIcon icon={faCopyright} />
              CheckUpdate 2024
           </div>
