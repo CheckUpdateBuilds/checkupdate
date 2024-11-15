@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
     
-        <div className="bg-black h-96 font-Nunito">
+        <div className="bg-black h-[700px] md:h-96 font-Nunito">
           <div className="pt-6 pl-0 md:pt-6 md:pl-9 flex justify-between">
             <Link to={'/'} ><img className="w-[100px] " src={companyLogo} alt="CheckUpdate Logo" /></Link>
             <a className="flex text-white underline" href="#">Back to top <MdArrowUpward className="w-6 h-6"/> </a>
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="text-right mt-10 md:mt-0 mr-0 md:mr-2 lg:mr-20">
               <div className="text-xl font-bold p-1 text-center">Our Socials</div>
               <div className="text-center">Connect with us on our social media <br className="hidden lg:block" /> platforms to enhance your experience</div>
-              <div className="flex justify-center">
+              <div className="flex justify-center pt-3">
                 <div className="bg-white m-1 rounded-full h-6 w-6">
                   <a href="https://x.com" target="_blank">
                     <FaXTwitter className="w-6 h-6 text-black" />
