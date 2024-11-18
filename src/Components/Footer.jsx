@@ -1,5 +1,4 @@
 // import React from 'react'
-import "./Footer.css";
 import companyLogo from '../assets/logo2.svg'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
