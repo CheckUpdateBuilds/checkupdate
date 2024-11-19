@@ -1,24 +1,40 @@
 // import React from 'react'
 import PropTypes from "prop-types";
 
-
 const Card = ({ title, description, subTitle, time, image }) => {
   return (
     <>
-        <div className="bg-companyWhite rounded-3xl h-96 mt-4 ">
-          <img className="" src={image} alt="img" />
-          <h5 className="p-2 font-bold" >{title}</h5>
-          <div className="pl-4">
-            <h4 className="">{description}</h4>
-            <p className=" font-semibold">{subTitle}</p>
-            <h6>{time} pm</h6>
+      <a href="javascript:void(0)">
+        <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-3xl w-[370px] ">
+          <div className="relative overflow-hidden text-white rounded-3xl w-[370px] h-auto border-1">
+            <img
+              src={image}
+            />
+          </div>
+          <div className="p-4">
+            <div className="mb-4 text-transform: uppercase px-2.5 text-xs text-companyOrange transition-all text-left">
+              {title}
+            </div>
+            <h6 className="mb-2 text-black text-lg font-semibold">
+              {subTitle}
+            </h6>
+            <p className="text-slate-600 leading-normal font-light">
+              {description}
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between p-4 pt-0.5">
+            <div className="flex items-center">
+              <div className="flex flex-col ml-3 text-sm">
+                <span className="text-slate-600"> {time} hours ago </span>
+              </div>
+            </div>
           </div>
         </div>
-
-
+      </a>
     </>
-  )
-}
+  );
+};
 
 // / Define prop types for validation
 Card.propTypes = {
@@ -29,4 +45,4 @@ Card.propTypes = {
   image: PropTypes.string.isRequired, // required and must be a string
 };
 
-export default Card
+export default Card;
