@@ -8,21 +8,20 @@ import { trendingNewData } from "../trendingNewsData";
 const Home = () => {
   return (
     <>
-      <div className="wrapper">
-        <div className="container text-white wrapper">
-          <p>Trending News</p>
+      <div className="bg-companyRed font-Nunito ">
+        <div className="p-7 text-3xl text-white">
+          <p className="" >Trending News</p>
         </div>
-        <div className="container gap-3 carddy">
-        {trendingNewData.map((newsData, index) => (
+        <div className="p-10 gap-3 bg-companyRed block md:flex ">
+          {trendingNewData.map((newsData, index) => (
             <Card
-            key={index}
-            image={newsData.image}
-            title={newsData.title}
-            description={newsData.description}
-            subTitle={newsData.subTitle}
-            time={newsData.time}
-          />
-          
+              key={index}
+              image={newsData.image}
+              title={newsData.title}
+              description={newsData.description}
+              subTitle={newsData.subTitle}
+              time={newsData.time}
+            />
           ))}
           <br />
 

@@ -1,17 +1,16 @@
 // import React from 'react'
-import "./Card.css"
 import PropTypes from "prop-types";
 
 
 const Card = ({ title, description, subTitle, time, image }) => {
   return (
     <>
-        <div className="card">
-          <img className="card-img-top" src={image} alt="img" />
-          <h5>{title}</h5>
-          <div className="card-body">
-            <h4 className="card-title">{description}</h4>
-            <p className="card-text">{subTitle}</p>
+        <div className="bg-companyWhite rounded-3xl h-96 mt-4 ">
+          <img className="" src={image} alt="img" />
+          <h5 className="p-2 font-bold" >{title}</h5>
+          <div className="pl-4">
+            <h4 className="">{description}</h4>
+            <p className=" font-semibold">{subTitle}</p>
             <h6>{time} pm</h6>
           </div>
         </div>
