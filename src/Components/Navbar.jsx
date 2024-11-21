@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MdOutlineSearch } from 'react-icons/md';
 import companyLogo from '../assets/logo2.svg'
-import { BiMenuAltRight } from "react-icons/bi";
+import { BiMenuAltLeft } from "react-icons/bi";
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         <nav className="">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <button className="inline-flex items-center p-2 ml-72 text-sm text-white rounded-lg md:hidden hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-black dark:text-black dark:hover:bg-red-700 dark:focus:ring-black" aria-controls="navbar-solid-bg" aria-expanded={isOpen} onClick={toggle} >
-              <BiMenuAltRight className="h-9 w-9"/>
+              <BiMenuAltLeft className="h-9 w-9"/>
             </button>
             <div className={`w-full md:block md:w-auto ${isOpen ? 'block' : 'hidden'}`} id="navbar-solid-bg">
               <ul className="flex flex-col font-medium mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent ">

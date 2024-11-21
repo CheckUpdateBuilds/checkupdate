@@ -1,18 +1,36 @@
 // import React from 'react'
 import Card from "../Components/Card";
-// import img1 from "../assets/Image 1.png";
-// import img2 from "../assets/Image 2.png";
-// import img3 from "../assets/Image 3.png";
+import Ads from "../Components/Ads";
+import VideoCard from "../Components/VideoCard";
 import { trendingNewData } from "../trendingNewsData";
+import { VideoNewsData } from "../VideoNewsData";
 
 const Home = () => {
   return (
     <>
       <div className="bg-companyRed font-Nunito ">
         <div className="p-7 text-3xl text-white">
-          <p className="" >Trending News</p>
+          <p className="">Trending News</p>
         </div>
         <div className="p-10 gap-3 bg-companyRed block md:flex ">
+          {trendingNewData.slice(0, 3).map((newsData, index) => (
+            <Card
+              key={index}
+              image={newsData.image}
+              title={newsData.title}
+              description={newsData.description}
+              subTitle={newsData.subTitle}
+              time={newsData.time}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-companyWhite font-Nunito">
+        <div className="p-7 text-3xl">
+          <p>Top Stories</p>
+        </div>
+        <div className="grid grid-cols-2 gap-3 px-1 ">
           {trendingNewData.map((newsData, index) => (
             <Card
               key={index}
@@ -23,12 +41,20 @@ const Home = () => {
               time={newsData.time}
             />
           ))}
-          <br />
-
-          {/* <Card className="cad1" img={img2} title = "SPORTS" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/><br/>
-
-          <Card className="cad2" img={img3} title = "TRAVEL" topic="A Private Inner-City Melbourne Home That Embraces Understated Drama" desc="lorem ipsum bla bla bla" time="2 mins ago"/> */}
         </div>
+        <Ads />
+        <div className="text-3xl font-Nunito ml-5">
+          <p>Most Watched This Week</p>
+        </div>
+        {VideoNewsData.map((VidData, index) => (
+          <VideoCard
+            key={index}
+            image={VidData.image}
+            title={VidData.title}
+            description={VidData.description}
+            time={VidData.time}
+          />
+        ))}
       </div>
     </>
   );
