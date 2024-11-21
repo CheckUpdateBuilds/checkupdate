@@ -5,8 +5,8 @@ const Card = ({ title, description, subTitle, time, image }) => {
   return (
     <>
       <a href="javascript:void(0)">
-        <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-3xl w-[370px] ">
-          <div className="relative overflow-hidden text-white rounded-3xl w-[370px] h-auto border-1">
+        <div className=" flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-3xl w-fit ">
+          <div className=" overflow-hidden text-white rounded-3xl w-fit h-auto border-1">
             <img
               src={image}
             />
