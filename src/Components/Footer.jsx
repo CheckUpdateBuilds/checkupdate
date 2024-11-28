@@ -65,7 +65,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="text-right mt-10 lg:mt-0 mr-0 lg:mr-2 lg:mr-20">
+            <div className="text-right mt-10 lg:mt-0 mr-0 lg:mr-20">
               <div className="text-xl font-bold p-1 text-center">Our Socials</div>
               <div className="text-center">Connect with us on our social media <br className="hidden lg:block" /> platforms to enhance your experience</div>
               <div className="flex justify-center pt-3">
