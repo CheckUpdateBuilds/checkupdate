@@ -28,7 +28,7 @@ function App() {
   return (
     <div className='overflow-hidden'>
       <Navbar/>
-      <div className="bg-transparent block md:hidden h-[180px] " ></div>
+      <div className="bg-transparent block h-[125px] lg:hidden " ></div>
       <Ads/>
       <Routes>
         <Route path='/' element={<Home/>} />
