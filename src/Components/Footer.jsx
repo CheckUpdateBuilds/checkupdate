@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <>
     
-        <div className="bg-black h-[700px] md:h-96 font-Nunito">
-          <div className="pt-6 pl-0 md:pt-6 md:pl-9 flex justify-between">
+        <div className="bg-black h-[700px] lg:h-96 font-Nunito">
+          <div className="pt-6 pl-0 lg:pt-6 lg:pl-9 flex justify-between">
             <Link to={'/'} ><img className="w-[100px] " src={companyLogo} alt="CheckUpdate Logo" /></Link>
             <a className="flex text-white underline" href="#">Back to top <MdArrowUpward className="w-6 h-6"/> </a>
           </div>
@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="text-white underline text-right">
           </div>
 
-          <section className="text-white font-Nunito block md:flex mt-4 justify-between p-1 ">
+          <section className="text-white font-Nunito block lg:flex mt-4 justify-between p-1 ">
             <div className="text-left p-2">
               <p className="text-xl font-bold p-1 text-center">Our Company</p>
 
@@ -40,24 +40,24 @@ const Footer = () => {
             
             </div>
 
-            <div className="items-center mt-12 md:mt-0 ">
+            <div className="items-center mt-12 lg:mt-0 ">
               <div className="text-xl font-bold p-1 text-center">Category</div>
 
-              <div className="block text-center md:flex">
+              <div className="block text-center lg:flex">
                 <Link to={'/'} className="pr-3 mx-auto " >News</Link>
                 <Link to={'/education'} className="pr-3 mx-auto" >Education</Link>
                 <Link to={'/business'} className="pr-3 mx-auto " >Business</Link>
                 <Link to={'/earth'} className="" >Earth & Wildlife</Link>
               </div>
 
-              <div className="text-center block md:flex mt-2">
+              <div className="text-center block lg:flex mt-2">
                 <Link to={'/sports'} className="pr-3 mx-auto" >Sports</Link>
                 <Link to={'/lifestyle'} className="pr-3 mx-auto" >Lifestyle</Link>
                 <Link to={'/science'} className="pr-3 mx-auto" >Science & Tech</Link>
                 <Link to={'/opportunities'} className="mx-auto" >Opportunities</Link>
               </div>
               
-              <div className="text-center block md:flex mt-2">
+              <div className="text-center block lg:flex mt-2">
                 <Link to={'/entertainment'} className="pr-3" >Entertainment</Link>
                 <Link to={'/politics'} className=" mr-2" >Politics</Link>
                 <Link to={'/culture'} className="mr-2" >Culture & Religion</Link>
@@ -65,7 +65,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="text-right mt-10 md:mt-0 mr-0 md:mr-2 lg:mr-20">
+            <div className="text-right mt-10 lg:mt-0 mr-0 lg:mr-20">
               <div className="text-xl font-bold p-1 text-center">Our Socials</div>
               <div className="text-center">Connect with us on our social media <br className="hidden lg:block" /> platforms to enhance your experience</div>
               <div className="flex justify-center pt-3">

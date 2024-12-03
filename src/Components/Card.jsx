@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 const Card = ({ title, description, subTitle, time, image }) => {
   return (
     <>
-      <a href="javascript:void(0)">
-        <div className=" flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-3xl w-fit ">
+      <a>
+        <div className=" flex flex-col my-6 bg-white shadow-sm border border-slate-800 rounded-3xl w-full ">
           <div className=" overflow-hidden text-white rounded-3xl w-fit h-auto border-1">
             <img
               src={image}
@@ -15,10 +15,10 @@ const Card = ({ title, description, subTitle, time, image }) => {
             <div className="mb-4 text-transform: uppercase px-2.5 text-xs text-companyOrange transition-all text-left">
               {title}
             </div>
-            <h6 className="mb-2 text-black text-lg font-semibold">
+            <h6 className="mb-2 text-black text-base font-semibold">
               {subTitle}
             </h6>
-            <p className="text-slate-600 leading-normal font-light">
+            <p className="text-slate-600 leading-normal text-sm font-light">
               {description}
             </p>
           </div>
