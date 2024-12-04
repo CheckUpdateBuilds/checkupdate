@@ -33,7 +33,7 @@ const Navbar = () => {
               <MdOutlineSearch className='absolute top-1/2 transform -translate-y-1/2 left-3 h-6 w-6 text-white'/>
               <input type="text" placeholder='Search' className='w-full w-[300px] pl-10 pr-4 py-2 h-10 bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white'/>
           </div>
-              <button className='bg-companyWhite text-center w-20 h-10 mr-10 md:hidden text-companyRed rounded-3xl'>Sign In</button>
+              <button className='bg-companyWhite text-center w-20 h-10 mr-10 md:hidden text-companyRed rounded-3xl hover:bg-slate-500 '>Sign In</button>
         </div>
 
         <nav className="">

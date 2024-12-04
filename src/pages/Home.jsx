@@ -92,18 +92,7 @@ const Home = () => {
         <div className="p-7 text-3xl">
           <p>Top Stories</p>
         </div>
-        <div className="grid grid-cols-2 gap-2 px-1 ">
-          {trendingNewData.map((newsData, index) => (
-            <Card
-              key={index}
-              image={newsData.image}
-              title={newsData.title}
-              description={newsData.description}
-              subTitle={newsData.subTitle}
-              time={newsData.time}
-            />
-          ))}
-        </div>
+        
 
         <Ads />
 
