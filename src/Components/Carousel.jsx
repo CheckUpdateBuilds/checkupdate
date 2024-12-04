@@ -1,48 +1,39 @@
-import { useState, useEffect, useCallback } from "react";
-import TestimonialCard from "./TestimonialCard";
-import { testimonialCardData } from "../../testimonialCardData";
+import { useState, useCallback } from "react";
+import Card from "../Components/Card";
+import { trendingNewData } from "../trendingNewsData";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const intervalTime = 3000; // Auto-scroll interval (in milliseconds)
 
   // Function to move to the next slide
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % testimonialCardData.length);
+    setCurrentSlide((prev) => (prev + 1) % trendingNewData.length);
   }, []);
 
   // Function to move to the previous slide
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonialCardData.length) % testimonialCardData.length);
+    setCurrentSlide((prev) => (prev - 1 + trendingNewData.length) % trendingNewData.length);
   };
-
-  // Auto-scroll logic using useEffect
-  useEffect(() => {
-    const autoScroll = setInterval(nextSlide, intervalTime);
-
-    // Cleanup the interval on component unmount
-    return () => clearInterval(autoScroll);
-  }, [nextSlide]);
 
   return (
     <div className="relative w-full flex justify-center items-center">
       {/* Carousel Wrapper */}
-      <div className="relative w-full h-96 flex justify-center items-center overflow-hidden">
-        {testimonialCardData.map((data, index) => {
+      <div className="relative w-full h-[600px] flex justify-center items-center overflow-hidden">
+        {trendingNewData.map((data, index) => {
           const isCurrent = index === currentSlide;
           const isPrev =
-            index === (currentSlide - 1 + testimonialCardData.length) % testimonialCardData.length;
+            index === (currentSlide - 1 + trendingNewData.length) % trendingNewData.length;
           const isNext =
-            index === (currentSlide + 1) % testimonialCardData.length;
+            index === (currentSlide + 1) % trendingNewData.length;
 
           // Determine classes for positioning and visibility
           let positionClasses = "opacity-0 scale-75 z-0 translate-x-0";
           if (isCurrent) {
             positionClasses = "opacity-100 scale-100 z-20 translate-x-0";
           } else if (isPrev) {
-            positionClasses = "opacity-50 scale-90 z-10 -translate-x-[120%]";
+            positionClasses = "opacity-50 scale-90 z-10 -translate-x-[105%]";
           } else if (isNext) {
-            positionClasses = "opacity-50 scale-90 z-10 translate-x-[120%]";
+            positionClasses = "opacity-50 scale-90 z-10 translate-x-[105%]";
           }
 
           return (
@@ -50,11 +41,12 @@ const Carousel = () => {
               key={index}
               className={`absolute transition-all duration-700 transform ${positionClasses}`}
             >
-              <TestimonialCard
-                icon={data.icon}
-                description={data.description}
-                name={data.name}
+              <Card
+                image={data.image}
                 title={data.title}
+                subTitle={data.subTitle}
+                description={data.description}
+                time={data.time}
               />
             </div>
           );
@@ -64,7 +56,7 @@ const Carousel = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-5 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
+        className="absolute top-1/2 hidden md:block left-5 lg:ml-10 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
       >
         <svg
           className="w-6 h-6 text-white dark:text-gray-800"
@@ -84,7 +76,7 @@ const Carousel = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-5 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
+        className="absolute top-1/2 hidden md:block right-5 lg:mr-10 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
       >
         <svg
           className="w-6 h-6 text-white dark:text-gray-800"
@@ -104,7 +96,7 @@ const Carousel = () => {
 
       {/* Indicators */}
       <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
-        {testimonialCardData.map((_, index) => (
+        {trendingNewData.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}

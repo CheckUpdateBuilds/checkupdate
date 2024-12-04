@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 // import React from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { BiBookmark } from "react-icons/bi";
-// import { FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 
 const VideoCard = ({ title, description, time, image }) => {
   return (
@@ -15,7 +15,7 @@ const VideoCard = ({ title, description, time, image }) => {
             src={image}
             alt="img here"
           />
-          {/* <FaPlay className="absolute inset-0 m-auto text-white w-[30px] h-auto" /> */}
+          <FaPlay className="absolute inset-0 m-auto text-white w-[30px] h-auto" />
         </div>
 
         <div className="p-6">

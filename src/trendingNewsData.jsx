@@ -5,45 +5,32 @@ import img3 from "../src/assets/Image 3.png";
 
 export const trendingNewData = [
   {
-    image: img1, // Reference the imported image here
+    image: img1,
     title: "Politics",
     subTitle: "A Private Inner-City Melbourne Home That Embraces Understated Drama",
     description: "The place is close to Barceloneta Beach and bus stop just 2 min by walk.",
     time: 3
   },
   {
-    image: img2, // Reference the second image here
+    image: img2,
     title: "Sports",
     subTitle: "A Private Inner-City Melbourne Home That Embraces Understated Drama",
     description: "The place is close to Barceloneta Beach and bus stop just 2 min by walk.",
     time: 4
   },
   {
-    image: img3, // Reference the third image here
+    image: img3,
     title: "BUSINESS",
     subTitle: "A Private Inner-City Melbourne Home That Embraces Understated Drama",
     description: "The place is close to Barceloneta Beach and bus stop just 2 min by walk.",
     time: 5
   },
   {
-    image: img1, // Reference the imported image here
-    title: "Politics",
-    subTitle: "A Private Inner-City Melbourne Home That Embraces Understated Drama",
-    description: "The place is close to Barceloneta Beach and bus stop just 2 min by walk.",
-    time: 3
-  },
-  {
-    image: img2, // Reference the second image here
+    image: img2,
     title: "Sports",
     subTitle: "A Private Inner-City Melbourne Home That Embraces Understated Drama",
     description: "The place is close to Barceloneta Beach and bus stop just 2 min by walk.",
     time: 4
   },
-  {
-    image: img3, // Reference the third image here
-    title: "BUSINESS",
-    subTitle: "A Private Inner-City Melbourne Home That Embraces Understated Drama",
-    description: "The place is close to Barceloneta Beach and bus stop just 2 min by walk.",
-    time: 5
-  },
+  
 ];

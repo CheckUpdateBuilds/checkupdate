@@ -5,7 +5,7 @@ const Card = ({ title, description, subTitle, time, image }) => {
   return (
     <>
       <a>
-        <div className=" flex flex-col my-6 bg-white shadow-sm border border-slate-800 rounded-3xl w-full ">
+        <div className=" flex flex-col my-6 bg-white shadow-sm border border-slate-800 rounded-3xl w-fit lg:w-96 ">
           <div className=" overflow-hidden text-white rounded-3xl w-fit h-auto border-1">
             <img
               src={image}
