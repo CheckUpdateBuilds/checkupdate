@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <>
     
-        <div className="bg-black h-[700px] lg:h-96 font-Nunito">
+        <div className="bg-black h-[700px] lg:h-96 font-Nunito lg:px-12 ">
           <div className="pt-6 pl-0 lg:pt-6 lg:pl-9 flex justify-between">
             <Link to={'/'} ><img className="w-[100px] " src={companyLogo} alt="CheckUpdate Logo" /></Link>
             <a className="flex text-white underline" href="#">Back to top <MdArrowUpward className="w-6 h-6"/> </a>
@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="text-white underline text-right">
           </div>
 
-          <section className="text-white font-Nunito block lg:flex mt-4 justify-between p-1 ">
+          <section className="text-white font-Nunito block lg:flex mt-4 justify-between p-1 lg:px-40 ">
             <div className="text-left p-2">
               <p className="text-xl font-bold p-1 text-center">Our Company</p>
 

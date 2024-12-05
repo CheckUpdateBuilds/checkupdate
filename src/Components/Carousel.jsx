@@ -18,7 +18,7 @@ const Carousel = () => {
   return (
     <div className="relative w-full flex justify-center items-center">
       {/* Carousel Wrapper */}
-      <div className="relative w-full h-[600px] flex justify-center items-center overflow-hidden">
+      <div className="relative -mt-12 w-full h-[600px] flex justify-center items-center overflow-hidden">
         {trendingNewData.map((data, index) => {
           const isCurrent = index === currentSlide;
           const isPrev =
@@ -56,7 +56,7 @@ const Carousel = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 hidden md:block left-5 lg:ml-10 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
+        className="absolute top-1/2 left-5 lg:ml-10 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
       >
         <svg
           className="w-6 h-6 text-white dark:text-gray-800"
@@ -76,7 +76,7 @@ const Carousel = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 hidden md:block right-5 lg:mr-10 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
+        className="absolute top-1/2 right-5 lg:mr-10 z-30 transform -translate-y-1/2 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 p-2 rounded-full"
       >
         <svg
           className="w-6 h-6 text-white dark:text-gray-800"

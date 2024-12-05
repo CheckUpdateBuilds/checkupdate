@@ -1,7 +1,9 @@
 // import React from 'react'
-import Card from "../Components/Card";
+// import Card from "../Components/Card";
+import Card2 from "../Components/Card2";
 import Ads from "../Components/Ads";
-import Subscribe from "../Components/Subscribe"
+import Subscribe from "../Components/Subscribe";
+import NewsCardOne from "../Components/NewsCardOne";
 import VideoCard from "../Components/VideoCard";
 import { trendingNewData } from "../trendingNewsData";
 import { VideoNewsData } from "../VideoNewsData";
@@ -11,7 +13,7 @@ const Home = () => {
   return (
     <>
       <div className="bg-companyRed font-Nunito p-2  ">
-        <div className="p-7 text-3xl text-white">
+        <div className="p-3 text-3xl text-white">
           <p className="">Trending News</p>
         </div>
         <div className="bg-companyRed">
@@ -22,12 +24,12 @@ const Home = () => {
       <div className="bg-companyWhite font-Nunito">
         <section className="lg:w-fit lg:flex" >
           <div className="" >
-            <div className="p-10 text-3xl">
+            <div className="p-2 my-2 text-3xl">
               <p>Top Stories</p>
             </div>
-            <div className="grid grid-cols-2 gap-5 p-10">
+            <div className="grid grid-cols-2 lg:p-10 lg:px-0 lg:gap-5">
               {trendingNewData.map((newsData, index) => (
-                <Card
+                <Card2
                   key={index}
                   image={newsData.image}
                   title={newsData.title}
@@ -37,13 +39,13 @@ const Home = () => {
                 />
               ))}
             </div>
+            <div className="block lg:hidden" >
+              <Ads />
+            </div>
           </div>
 
 
-          <div className="lg:w-fit" >
-            <div className="" >
-              <Ads />
-            </div>
+          <div className="lg:w-fit lg:mt-[130px] " >
             <div className="text-xl font-bold font-Nunito ml-5">
               <p>Most Watched This Week</p>
             </div>
@@ -57,18 +59,44 @@ const Home = () => {
                   time={VidData.time}
                 />
               ))}
+            </div>
+            <div className="" >
+              <Ads />
             </div>
           </div>
         </section>
 
         <section className="lg:w-fit lg:flex" >
+
+          <div className="block lg:hidden lg:w-fit" >
+              <div className="text-xl font-bold font-Nunito ml-5">
+                <p>Recommended For You</p>
+              </div>
+              <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
+                {VideoNewsData.slice(0, 4).map((VidData, index) => (
+                  <NewsCardOne
+                    key={index}
+                    image={VidData.image}
+                    title={VidData.title}
+                    description={VidData.description}
+                    time={VidData.time}
+                  />
+                ))}
+              </div>
+            <Ads />
+          </div>
+
+
           <div className="" >
-            <div className="p-10 text-3xl">
+            <div>
+              <Ads />
+            </div>
+            <div className="p-2 my-2 text-3xl">
               <p>Latest Stories</p>
             </div>
-            <div className="grid grid-cols-2 gap-5 p-10">
+            <div className="grid grid-cols-2 lg:p-10 lg:px-0 lg:gap-5">
               {trendingNewData.map((newsData, index) => (
-                <Card
+                <Card2
                   key={index}
                   image={newsData.image}
                   title={newsData.title}
@@ -80,17 +108,13 @@ const Home = () => {
             </div>
           </div>
 
-
-          <div className="lg:w-fit" >
-            <div className="" >
-              <Subscribe />
-            </div>
+          <div className="hidden lg:block lg:w-fit lg:-mt-[300px] " >
             <div className="text-xl font-bold font-Nunito ml-5">
-              <p>Most Watched This Week</p>
+              <p>Recommended For You</p>
             </div>
             <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
               {VideoNewsData.slice(0, 4).map((VidData, index) => (
-                <VideoCard
+                <NewsCardOne
                   key={index}
                   image={VidData.image}
                   title={VidData.title}
@@ -99,8 +123,16 @@ const Home = () => {
                 />
               ))}
             </div>
-          <Ads />
+            <div>
+              <Ads />
+            </div>
+            <div className="rounded-3xl" >
+              <Subscribe />
+            </div>
           </div>
+
+
+          
         </section>
         
       </div>

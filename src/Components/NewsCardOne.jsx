@@ -2,20 +2,18 @@ import PropTypes from "prop-types";
 // import React from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { BiBookmark } from "react-icons/bi";
-import { FaPlay } from "react-icons/fa";
 
 const VideoCard = ({ title, description, time, image }) => {
   return (
     <>
       <div className="flex flex-row w-full mt-3.5 rounded-3xl bg-white text-surface shadow-secondary-1 md:max-w-xl md:flex-row border md:m-10">
         
-        <div className=" flex-shrink-0 relative">
+        <div className=" flex-shrink-0">
           <img
             className="h-44 w-36 rounded-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
             src={image}
             alt="img here"
           />
-          <FaPlay className="absolute inset-0 m-auto text-black p-[10px] w-[55px] h-auto bg-white rounded-full flex items-center justify-center" />
         </div>
 
         <div className="p-6">

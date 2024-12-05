@@ -18,7 +18,7 @@ import NotFound from './pages/NotFound'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Ads from './Components/Ads';
-import Subscribe from './Components/Subscribe';
+// import Subscribe from './Components/Subscribe';
 // import LoginSignUp from './pages/LoginSignUp'
 
 
@@ -46,7 +46,7 @@ function App() {
         <Route path='*' element={<NotFound/>} />
         
       </Routes>
-      <Subscribe/>
+      {/* <Subscribe/> */}
       <Ads/>
       <Footer/>
       

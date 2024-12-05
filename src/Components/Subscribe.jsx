@@ -4,7 +4,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 const Subscribe = () => {
   return (
     <>
-        <div className="text-center bg-companyLightRed">
+        <div className="text-center bg-companyLightRed rounded-3xl ">
             <div className="h-[40px] bg-companyWhite"></div>
                 <div className="mt-5 font-bold text-3xl">Subscribe To Our Newsletter!</div>
                 <div className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, dicta!</div>
