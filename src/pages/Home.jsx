@@ -43,10 +43,10 @@ const Home = () => {
               <Ads />
             </div>
           </div>
+          
 
-
-          <div className="lg:w-fit lg:mt-[130px] " >
-            <div className="text-xl font-bold font-Nunito ml-5">
+          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[100px] " >
+           <div className="text-xl font-bold font-Nunito ">
               <p>Most Watched This Week</p>
             </div>
             <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">

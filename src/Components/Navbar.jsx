@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         <nav className="">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between  mx-auto p-4">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between  mx-auto p-2">
           
             <div className={`w-full lg:block lg:w-auto ${isOpen ? 'block' : 'hidden'}`} id="navbar-solid-bg">
               <ul className="flex flex-col font-medium mt-4 rounded-lg lg:flex-row lg:space-x-5 lg:mt-0 lg:ml-10 lg:mr-10 lg:border-0 lg:bg-transparent ">

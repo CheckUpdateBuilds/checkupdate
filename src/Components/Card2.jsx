@@ -7,7 +7,7 @@ const Card = ({ title, description, subTitle, time, image }) => {
     <>
       <Link to={'/'} >
         <div className=" flex flex-col my-6 bg-white rounded-3xl w-[190px] lg:w-96 ">
-          <div className=" overflow-hidden text-white rounded-3xl h-auto border-1">
+          <div className=" overflow-hidden text-white rounded-3xl h-auto border-1 mr-[50px]">
             <img
               src={image}
             />

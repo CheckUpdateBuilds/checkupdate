@@ -7,7 +7,7 @@ import { FaPlay } from "react-icons/fa";
 const VideoCard = ({ title, description, time, image }) => {
   return (
     <>
-      <div className="flex flex-row w-full mt-3.5 rounded-3xl bg-white text-surface shadow-secondary-1 md:max-w-xl md:flex-row border md:m-10">
+      <div className="flex flex-row  mt-3.5 rounded-3xl bg-white text-surface shadow-secondary-1 md:max-w-xl md:flex-row border md:m-5">
         
         <div className=" flex-shrink-0 relative">
           <img
