@@ -45,7 +45,7 @@ const Home = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[100px] " >
+          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px] " >
            <div className="text-xl font-bold font-Nunito ">
               <p>Most Watched This Week</p>
             </div>

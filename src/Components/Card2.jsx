@@ -1,3 +1,4 @@
+// Top Stories
 // import React from 'react'
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
@@ -6,13 +7,13 @@ const Card = ({ title, description, subTitle, time, image }) => {
   return (
     <>
       <Link to={'/'} >
-        <div className=" flex flex-col my-6 bg-white rounded-3xl w-[190px] lg:w-96 ">
+        <div className=" flex flex-col my-6 bg-white rounded-3xl ml-[5%] w-[115%] lg:w-96 ">
           <div className=" overflow-hidden text-white rounded-3xl h-auto border-1 mr-[50px]">
             <img
               src={image}
             />
           </div>
-          <div className="p-4">
+          <div className="p-3 mr-[50px]">
             <div className="mb-4 text-transform: uppercase px-2.5 text-xs text-companyOrange transition-all text-left">
               {title}
             </div>
