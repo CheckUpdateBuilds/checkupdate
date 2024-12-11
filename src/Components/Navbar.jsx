@@ -51,6 +51,9 @@ const Navbar = () => {
                   <Link to={'/entertainment'} className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Entertainment</Link>
                 </li>
                 <li>
+                  <Link to={'/education'} className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Education</Link>
+                </li>
+                <li>
                   <Link to={'/lifestyle'} className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Lifestyle</Link>
                 </li>
                 <li>
@@ -93,6 +96,9 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link to={'/entertainment'} className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Entertainment</Link>
+                </li>
+                <li>
+                  <Link to={'/education'} className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Education</Link>
                 </li>
                 <li>
                   <Link to={'/lifestyle'} className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Lifestyle</Link>
