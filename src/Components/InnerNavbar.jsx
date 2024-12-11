@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const InnerNavbar = () => {
   return (
     <>
-      <div className="font-Nunito bg-companyWhite w-full h-[50px] text-center p-10 hidden lg:block ">
+      <div className="font-Nunito bg-companyWhite w-full h-[50px] text-center p-10 hidden ">
         <ul className="flex text-center justify-evenly text-black font-bold">
           <li>
             <Link to={"#"} className="text-companyRed border-b-2 border-companyRed pb-2 " >SPORT NEWS</Link>

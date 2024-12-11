@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Ads />
-      <div className="bg-companyRed font-Nunito p-2  ">
+      <div className="bg-companyRed font-Nunito lg:p-10 ">
         <div className="p-3 text-3xl text-white">
           <p className="">Trending News</p>
         </div>
@@ -22,7 +22,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-companyWhite font-Nunito">
+      <div className="bg-companyWhite font-Nunito lg:p-10">
         <section className="lg:w-fit lg:flex" >
           <div className="" >
             <div className="p-2 my-2 text-3xl">

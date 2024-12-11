@@ -15,7 +15,7 @@ const Sports = () => {
     
       <InnerNavbar />
 
-      <div className="">
+      <div className="pt-10 lg:p-10">
 
       <section className="lg:w-fit lg:flex" >
           <div className="" >
@@ -64,7 +64,7 @@ const Sports = () => {
       <section className="lg:w-fit lg:flex" >
           <div className="" >
             <div className="p-2 my-2 text-3xl">
-              <p>Latest Sports Stories</p>
+              <p>Latest Sports News</p>
             </div>
             <div className="grid grid-cols-2 lg:p-10 lg:px-0 lg:gap-5">
               {trendingNewData.map((newsData, index) => (
@@ -84,8 +84,8 @@ const Sports = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px]">
-           <div className="text-xl font-bold font-Nunito ">
+          <div className=" lg:w-fit lg:ml-[16px] lg:-mt-[70px]">
+           <div className="text-xl px-10 pt-1 font-bold font-Nunito ">
               <p>Latest Sports Videos</p>
             </div>
             <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
@@ -104,29 +104,10 @@ const Sports = () => {
             </div>
           </div>
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px]">
-           <div className="text-xl font-bold font-Nunito ">
-              <p>Most Viewed This Week</p>
-            </div>
-            <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
-              {VideoNewsData.slice(0, 4).map((VidData, index) => (
-                <VideoCard
-                  key={index}
-                  image={VidData.image}
-                  title={VidData.title}
-                  description={VidData.description}
-                  time={VidData.time}
-                />
-              ))}
-            </div>
-            <div className="" >
-              <Ads />
-            </div>
-          </div>
       </section>
 
-      <section>
-        <div className="" >
+      <section className="lg:w-fit lg:flex" >
+          <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Local Sports News</p>
             </div>
@@ -142,11 +123,32 @@ const Sports = () => {
                 />
               ))}
             </div>
+            <div className="block lg:hidden" >
+              <Ads />
+            </div>
+          </div>
+          
 
+          <div className=" lg:w-fit lg:ml-[16px] lg:-mt-[70px]">
+           <div className="text-xl px-10 pt-1 font-bold font-Nunito ">
+              <p>Most Viewed This Week</p>
+            </div>
+            <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
+              {VideoNewsData.slice(0, 4).map((VidData, index) => (
+                <VideoCard
+                  key={index}
+                  image={VidData.image}
+                  title={VidData.title}
+                  description={VidData.description}
+                  time={VidData.time}
+                />
+              ))}
+            </div>
             <div className="rounded-3xl" >
               <Subscribe />
             </div>
-        </div>
+          </div>
+
       </section>
 
         
