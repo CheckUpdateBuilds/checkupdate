@@ -18,6 +18,7 @@ import NotFound from './pages/NotFound'
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Ads from './Components/Ads';
+import LoginSignUp from './Components/LoginSignUp/LoginSignUp';
 // import Subscribe from './Components/Subscribe';
 // import LoginSignUp from './pages/LoginSignUp'
 
@@ -43,6 +44,7 @@ function App() {
         <Route path='/earth' element={<Earth/>} />
         <Route path='/opportunities' element={<Opportunities/>} />
         <Route path='/awards' element={<CheckUpdateAwards/>} />
+        <Route path='/login' element={<LoginSignUp/>} />
         <Route path='*' element={<NotFound/>} />
         
       </Routes>
