@@ -12,6 +12,7 @@ import Carousel from "../Components/Carousel";
 const Home = () => {
   return (
     <>
+      <Ads />
       <div className="bg-companyRed font-Nunito p-2  ">
         <div className="p-3 text-3xl text-white">
           <p className="">Trending News</p>

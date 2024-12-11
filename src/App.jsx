@@ -29,7 +29,7 @@ function App() {
     <div className='overflow-hidden'>
       <Navbar/>
       <div className="bg-transparent block h-[112px] lg:hidden " ></div>
-      <Ads/>
+      {/* <Ads/> */}
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/sports' element={<Sports/>} />

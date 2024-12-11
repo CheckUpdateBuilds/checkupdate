@@ -5,20 +5,19 @@ import { Link } from "react-router-dom";
 const InnerNavbar = () => {
   return (
     <>
-      <div className="font-Nunito bg-companyWhite w-full h-[50px] text-center ">
-        <ul className="flex text-center justify-evenly text-companyOrange underline">
+      <div className="font-Nunito bg-companyWhite w-full h-[50px] text-center p-10 hidden lg:block ">
+        <ul className="flex text-center justify-evenly text-black font-bold">
           <li>
-            <Link to={"#"}>News</Link>
+            <Link to={"#"} className="text-companyRed border-b-2 border-companyRed pb-2 " >SPORT NEWS</Link>
           </li>
           <li>
-            <Link to={"#"}>Sports</Link>
+            <Link to={"#"}>SCORES</Link>
           </li>
           <li>
-            <Link to={"#"}>Live</Link>
+            <Link to={"#"}>LIVE MATCHES</Link>
           </li>
         </ul>
       </div>
-      <hr className="border-2 mb-10" />
     </>
   );
 };
