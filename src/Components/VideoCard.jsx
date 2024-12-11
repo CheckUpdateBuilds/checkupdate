@@ -9,9 +9,9 @@ const VideoCard = ({ title, description, time, image }) => {
     <>
       <div className="flex flex-row  mt-3.5 rounded-3xl bg-white text-surface shadow-secondary-1 md:max-w-xl md:flex-row border md:m-5">
         
-        <div className=" flex-shrink-0 relative">
+        <div className=" flex-shrink-0 relative ">
           <img
-            className="h-44 w-36 rounded-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+            className="h-[195px] w-36 rounded-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
             src={image}
             alt="img here"
           />

@@ -10,7 +10,7 @@ const VideoCard = ({ title, description, time, image }) => {
         
         <div className=" flex-shrink-0">
           <img
-            className="h-44 w-36 rounded-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+            className="h-[195px] w-36 rounded-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
             src={image}
             alt="img here"
           />
