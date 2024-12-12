@@ -9,7 +9,6 @@ import { trendingNewData } from "../trendingNewsData";
 import { VideoNewsData } from "../VideoNewsData";
 import Carousel from "../Components/Carousel";
 // import LoginSignUp from "../Components/LoginSignUp/LoginSignUp";
-import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -137,13 +136,6 @@ const Home = () => {
 
 
         </section>
-
-          <div className='text-center' >
-            <button
-              className="bg-companyRed hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
-              <Link to={'login'} > Login </Link>
-            </button>
-          </div>
         
       </div>
     </>
