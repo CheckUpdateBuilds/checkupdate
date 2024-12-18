@@ -11,21 +11,21 @@ const Card = ({ title, description, subTitle, time, image }) => {
               src={image}
             />
           </div>
-          <div className="p-4">
-            <div className="mb-4 text-transform: uppercase px-2.5 text-xs text-companyOrange transition-all text-left">
+          <div className="p-2 pb-0">
+            <div className="mb-2 text-transform: uppercase px-2.5 text-base text-companyOrange transition-all text-left">
               {title}
             </div>
-            <h6 className="mb-2 text-black text-base font-semibold">
+            <h6 className="mb-2 ml-2 text-black text-base font-semibold">
               {subTitle}
             </h6>
-            <p className="text-slate-600 leading-normal text-sm font-light">
+            <p className="text-slate-600 ml-2 mb-2 leading-normal text-sm font-light">
               {description}
             </p>
           </div>
 
-          <div className="flex items-center justify-between p-4 pt-0.5">
+          <div className="flex items-center justify-between p-3 pt-0">
             <div className="flex items-center">
-              <div className="flex flex-col ml-3 text-sm">
+              <div className="flex flex-col ml-0 mb-3 text-sm">
                 <span className="text-slate-600"> {time} hours ago </span>
               </div>
             </div>

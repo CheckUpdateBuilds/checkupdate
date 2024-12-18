@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <Ads />
       <div className="bg-companyRed font-Nunito lg:p-10 ">
-        <div className="p-3 text-3xl text-white">
+        <div className="p-3 text-white">
           <p className="">Trending News</p>
         </div>
         <div className="bg-companyRed">
@@ -49,7 +49,7 @@ const Home = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px] " >
+          <div className=" lg:w-fit lg:ml-[10%] lg:mt-[120px] " >
            <div className="text-xl font-bold font-Nunito ">
               <p>Most Watched This Week</p>
             </div>
