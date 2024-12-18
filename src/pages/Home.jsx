@@ -36,7 +36,7 @@ const Home = () => {
                 <Card2
                   key={index}
                   image={newsData.image}
-                  title={newsData.title}
+                  title={newsData.title}add
                   description={newsData.description}
                   subTitle={newsData.subTitle}
                   time={newsData.time}
