@@ -25,7 +25,7 @@ const Home = () => {
       </div>
 
       <div className="bg-companyWhite font-Nunito lg:p-10">
-        <section className="lg:w-fit lg:flex" >
+        <section className="lg:w-fit lg:flex lg:justify-between lg:space-x-12 " >
           <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Top Stories</p>
@@ -39,7 +39,7 @@ const Home = () => {
                   description={newsData.description}
                   subTitle={newsData.subTitle}
                   time={newsData.time}
-                />
+                /> 
               ))}
             </div>
             <div className="block lg:hidden" >
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[10%] lg:mt-[120px] " >
+          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px] " >
            <div className="text-xl font-bold font-Nunito ">
               <p>Most Watched This Week</p>
             </div>
@@ -69,9 +69,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="lg:w-fit lg:flex" >
+        <section className="lg:w-fit lg:flex justify-between lg:space-x-10 " >
 
-          <div className="block lg:hidden lg:w-fit" >
+          <div className="block lg:hidden" >
               <div className="text-xl text-center font-bold font-Nunito ml-5">
                 <p>Recommended For You</p>
               </div>
@@ -90,7 +90,7 @@ const Home = () => {
           </div>
 
 
-          <div className="" >
+          <div className="lg:w-1/2" >
             <div>
               <Ads />
             </div>
@@ -111,7 +111,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-fit lg:-mt-[300px] " >
+          <div className="hidden lg:block lg:w-1/2 lg:-mt-[0px] " >
             <div className="text-xl font-bold font-Nunito ml-5">
               <p>Recommended For You</p>
             </div>
