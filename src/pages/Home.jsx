@@ -16,10 +16,10 @@ const Home = () => {
     <>
       <Ads />
       <div className="bg-companyRed font-Nunito lg:p-10 ">
-        <div className="p-3 text-white">
+        <div className="pt-10 lg:p-3 px-10 lg:px-0 font-bold text-[20px]  text-white">
           <p className="">Trending News</p>
         </div>
-        <div className="bg-companyRed">
+        <div className="bg-companyRed -mt-[80px] lg:mt-0 ">
           <Carousel />
         </div>
       </div>
