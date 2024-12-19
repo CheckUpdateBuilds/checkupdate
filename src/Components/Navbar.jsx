@@ -33,7 +33,7 @@ const Navbar = () => {
               <MdOutlineSearch className='absolute top-1/2 transform -translate-y-1/2 left-3 h-6 w-6 text-white'/>
               <input type="text" placeholder='Search' className='w-[200px] pl-10 pr-4 py-2 h-[30px] bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white'/>
           </div>
-              <button className='bg-companyWhite text-center w-[70px] h-[30px] mr-10 lg:hidden text-companyRed rounded-3xl hover:bg-slate-500 '> <Link to={'login'} > Sign in </Link> </button>
+          <button className='bg-companyWhite text-center w-[70px] h-[30px] mr-10 lg:hidden text-companyRed rounded-3xl hover:bg-slate-200 '> <Link to={'login'} > Sign in </Link> </button>
         </div>
 
         <nav className="hidden lg:block ">
@@ -83,46 +83,46 @@ const Navbar = () => {
         </nav>
 
       </div>
-        <nav className="bg-companyRed rounded-md w-60 mx-auto pt-20 fixed right-10 lg:hidden z-40 ">
+        <nav className="bg-companyRed w-60 mx-auto pt-20 fixed right-0 lg:hidden z-40 ">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           
             <div className={`w-full lg:block lg:w-auto ${isOpen ? 'block' : 'hidden'}`} id="navbar-solid-bg">
               <ul className="flex flex-col font-medium mt-4 rounded-lg lg:flex-row lg:space-x-5 lg:mt-0 lg:ml-10 lg:mr-10 lg:border-0 lg:bg-transparent ">
                 <li>
-                  <Link to={'/'} className="block py-2 px-[1px] ml-[162px] w-[50px] text-xs text-end lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">News</Link>
+                  <Link to={'/'} className="block py-2 px-[1px] ml-[142px] w-[50px] text-xs text-end lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">News</Link>
                 </li>
                 <li>
-                  <Link to={'/sports'} className="block py-2 px-[1px] ml-[162px] w-[50px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Sports</Link>
+                  <Link to={'/sports'} className="block py-2 px-[1px] ml-[142px] w-[50px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Sports</Link>
                 </li>
                 <li>
-                  <Link to={'/entertainment'} className="block py-2 px-[1px] ml-[112px] w-[100px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Entertainment</Link>
+                  <Link to={'/entertainment'} className="block py-2 px-[1px] ml-[92px] w-[100px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Entertainment</Link>
                 </li>
                 <li>
-                  <Link to={'/education'} className="block py-2 px-[1px] ml-[132px] w-[80px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Education</Link>
+                  <Link to={'/education'} className="block py-2 px-[1px] ml-[112px] w-[80px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Education</Link>
                 </li>
                 <li>
-                  <Link to={'/lifestyle'} className="block py-2 px-[1px] ml-[152px] w-[60px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Lifestyle</Link>
+                  <Link to={'/lifestyle'} className="block py-2 px-[1px] ml-[130px] w-[60px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Lifestyle</Link>
                 </li>
                 <li>
-                  <Link to={'/politics'} className="block py-2 px-[1px] ml-[162px] w-[50px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Politics</Link>
+                  <Link to={'/politics'} className="block py-2 px-[1px] ml-[140px] w-[50px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Politics</Link>
                 </li>
                 <li>
-                  <Link to={'/business'} className="block py-2 px-[1px] ml-[142px] w-[70px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Business</Link>
+                  <Link to={'/business'} className="block py-2 px-[1px] ml-[122px] w-[70px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Business</Link>
                 </li>
                 <li>
-                  <Link to={'/science'} className="block py-2 px-[1px] ml-[102px] w-[110px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Science & Tech</Link>
+                  <Link to={'/science'} className="block py-2 px-[1px] ml-[80px] w-[110px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Science & Tech</Link>
                 </li>
                 <li>
-                  <Link to={'/culture'} className="block py-2 px-[1px] ml-[72px] w-[140px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Culture & Religion</Link>
+                  <Link to={'/culture'} className="block py-2 px-[1px] ml-[48px] w-[140px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Culture & Religion</Link>
                 </li>
                 <li>
-                  <Link to={'/earth'} className="block py-2 px-[1px] ml-[92px] w-[120px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Earth & Wildlife</Link>
+                  <Link to={'/earth'} className="block py-2 px-[1px] ml-[67px] w-[120px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Earth & Wildlife</Link>
                 </li>
                 <li>
-                  <Link to={'/opportunities'} className="block py-2 px-[1px] ml-[102px] w-[110px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Opportunities</Link>
+                  <Link to={'/opportunities'} className="block py-2 px-[1px] ml-[75px] w-[110px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">Opportunities</Link>
                 </li>
                 <li>
-                  <Link to={'/awards'} className="block py-2 px-[1px] ml-[56px] w-[160px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">CheckUpdate Awards</Link>
+                  <Link to={'/awards'} className="block py-2 px-[1px] ml-[24px] w-[160px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2">CheckUpdate Awards</Link>
                 </li>
               </ul>
             </div>
