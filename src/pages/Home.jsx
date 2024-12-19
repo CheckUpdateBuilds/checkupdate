@@ -72,7 +72,7 @@ const Home = () => {
         <section className="lg:w-fit lg:flex" >
 
           <div className="block lg:hidden lg:w-fit" >
-              <div className="text-xl font-bold font-Nunito ml-5">
+              <div className="text-xl text-center font-bold font-Nunito ml-5">
                 <p>Recommended For You</p>
               </div>
               <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
