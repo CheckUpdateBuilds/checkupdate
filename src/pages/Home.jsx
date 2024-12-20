@@ -49,7 +49,7 @@ const Home = () => {
           
 
           <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px] " >
-           <div className="text-xl font-bold font-Nunito ">
+           <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
               <p>Most Watched This Week</p>
             </div>
             <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
@@ -72,7 +72,7 @@ const Home = () => {
         <section className="lg:w-fit lg:flex justify-between lg:space-x-10 " >
 
           <div className="block lg:hidden" >
-              <div className="text-xl text-center font-bold font-Nunito ml-5">
+              <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
                 <p>Recommended For You</p>
               </div>
               <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
