@@ -2,15 +2,16 @@ import PropTypes from "prop-types";
 // import React from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { BiBookmark } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const VideoCard = ({ title, description, time, image }) => {
   return (
     <>
-      <div className="flex flex-row w-full mt-3.5 rounded-3xl bg-white text-surface shadow-secondary-1 md:max-w-xl md:flex-row border md:m-10">
+      <div className="flex flex-row w-fit mt-3.5 rounded-3xl bg-white text-surface shadow-secondary-1 md:max-w-xl md:flex-row border">
         
-        <div className=" flex-shrink-0">
+        <div className="flex-shrink-0 relative ">
           <img
-            className="h-[195px] w-36 rounded-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+            className="w-36 h-[175px] lg:w-[] lg:h-[180px] rounded-lg object-cover md:h-auto md:rounded-none md:rounded-l-lg"
             src={image}
             alt="img here"
           />
@@ -18,15 +19,15 @@ const VideoCard = ({ title, description, time, image }) => {
 
         <div className="p-6">
           <div className="flex justify-between">
-            <h5 className="mb-2 text-xs font-medium uppercase text-companyOrange">{title}</h5>
+            <Link to={'/sports'} ><h5 className="mb-2 text-xs font-medium uppercase text-companyOrange">{title}</h5></Link>
             <p className="text-xs">{time} hours ago</p>
           </div>
           <p className=" mb-4 text-xs md:mb-4 md:text-base ">
             {description}
           </p>
           <div className="flex justify-end space-x-10">
-            <MdOutlineArrowOutward className="w-8 h-auto bg-slate-100 p-1 rounded-full" />
-            <BiBookmark className="w-8 h-auto bg-slate-100 p-1 rounded-full" />
+            <MdOutlineArrowOutward className="w-8 h-auto bg-slate-100 p-1 rounded-full hover:bg-slate-200" />
+            <BiBookmark className="w-8 h-auto bg-slate-100 p-1 rounded-full hover:bg-slate-200" />
           </div>
         </div>
       </div>

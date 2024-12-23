@@ -10,7 +10,7 @@ const Card = ({ title, description, subTitle, time, image }) => {
         <div className=" flex flex-col my-6 bg-white rounded-3xl ml-[5%] w-[115%] lg:w-96 ">
           <div className=" overflow-hidden text-white rounded-2xl h-auto border-1 mr-[50px]">
             <img
-              src={image}
+              src={image} className=''
             />
           </div>
           <div className="p-2 mr-[50px]">
