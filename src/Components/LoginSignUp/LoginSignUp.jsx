@@ -1,19 +1,20 @@
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import companyLogo from '../Assets/logo1.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faFacebook, faGoogle, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 // import Navbar from '../Navbar';
 
 const LoginSignUp = () => {
   const emailref = useRef(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleEmailSubmit = (event) => {
     event.preventDefault();
     const email = emailref.current.value;
     localStorage.setItem('userEmail', email);
-    navigate('/');
+    // navigate('/');
   };
 
   return (
@@ -45,19 +46,21 @@ const LoginSignUp = () => {
           </div>
 
           <div className="my-5 text-center text-gray-600">
-            Or sign in with your email address
+            -- Or sign in with your email address --
           </div>
 
           <input className='w-full max-w-sm py-2 px-4 border border-gray-300 rounded-full hover:text-lg bg-companyWhite mb-4' placeholder='Enter your email address' type="email" ref={emailref} />
 
           <div className="text-center text-black mb-4">
             By continuing, you agree to the
-            <a href="#" className="text-companyRed"> T&amp;C </a>
+            <Link to={"#"} className="text-companyRed"> T&amp;C </Link>
             &amp;
-            <a href="#" className="text-companyRed"> Privacy Policy </a>
+            <Link to={"#"} className="text-companyRed"> Privacy Policy </Link>
           </div>
 
-          <button className='py-2 px-4 bg-companyRed text-white rounded-full ' onClick={handleEmailSubmit}>Continue</button>
+          <button className='py-2 px-4 bg-companyRed text-white rounded-full ' onClick={handleEmailSubmit}>
+            <Link to={'/'} >Continue</Link>
+          </button>
         </div>
       </div>
     </>

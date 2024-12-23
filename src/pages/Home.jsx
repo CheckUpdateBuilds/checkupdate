@@ -48,7 +48,7 @@ const Home = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px] " >
+          <div className=" lg:w-1/2 lg:ml-[16px] lg:mt-[120px] " >
            <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
               <p>Most Watched This Week</p>
             </div>
@@ -69,7 +69,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="lg:w-fit lg:flex justify-between lg:space-x-10 " >
+        <section className="lg:w-fit lg:flex justify-between " >
 
           <div className="block lg:hidden" >
               <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
@@ -89,11 +89,7 @@ const Home = () => {
             <Ads />
           </div>
 
-
-          <div className="lg:w-1/2" >
-            <div>
-              <Ads />
-            </div>
+          <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Latest Stories</p>
             </div>
@@ -111,8 +107,8 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-1/2 lg:-mt-[0px] " >
-            <div className="text-xl font-bold font-Nunito ml-5">
+          <div className="hidden lg:block lg:w-1/2 lg:ml-[46px] lg:-mt-[0px] " >
+            <div className="text-xl font-bold font-Nunito ml-5 w-1/2 ">
               <p>Recommended For You</p>
             </div>
             <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">

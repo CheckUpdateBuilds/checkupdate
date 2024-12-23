@@ -17,7 +17,7 @@ const Sports = () => {
 
       <div className="pt-10 lg:p-10">
 
-      <section className="lg:w-fit lg:flex" >
+      <section className="lg:w-fit lg:flex justify-between lg:space-x-10 " >
           <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Top Sports Stories</p>
@@ -40,7 +40,7 @@ const Sports = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:mt-[120px] " >
+          <div className=" lg:w-1/2 lg:ml-[16px] lg:mt-[120px] " >
            <div className="text-xl font-bold font-Nunito ">
               <p>Hot Stories This Week</p>
             </div>
@@ -61,7 +61,7 @@ const Sports = () => {
           </div>
       </section>
 
-      <section className="lg:w-fit lg:flex" >
+      <section className="lg:w-fit lg:flex lg:justify-between lg:space-x-10 " >
           <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Latest Sports News</p>
@@ -84,7 +84,7 @@ const Sports = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:-mt-[70px]">
+          <div className=" lg:w-1/2 lg:ml-[16px] lg:-mt-[70px] ">
            <div className="text-xl px-10 pt-1 font-bold font-Nunito ">
               <p>Latest Sports Videos</p>
             </div>
@@ -106,7 +106,7 @@ const Sports = () => {
 
       </section>
 
-      <section className="lg:w-fit lg:flex" >
+      <section className="lg:w-fit lg:flex lg:justify-between lg:space-x-10 " >
           <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Local Sports News</p>
@@ -129,7 +129,7 @@ const Sports = () => {
           </div>
           
 
-          <div className=" lg:w-fit lg:ml-[16px] lg:-mt-[70px]">
+          <div className=" lg:w-1/2 lg:ml-[16px] lg:-mt-[70px]">
            <div className="text-xl px-10 pt-1 font-bold font-Nunito ">
               <p>Most Viewed This Week</p>
             </div>
