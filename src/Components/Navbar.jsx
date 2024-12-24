@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { MdOutlineSearch } from "react-icons/md";
-import companyLogo from "../assets/logo2.svg";
-// import companyLogo2 from "../assets/logo3.svg";
-import { BiMenuAltLeft } from "react-icons/bi";
+import { BiMenuAltLeft, BiX } from "react-icons/bi"; // Import BiX icon
 import { Link } from "react-router-dom";
+import companyLogo2 from "../assets/logo4.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,32 +41,32 @@ const Navbar = () => {
         <div className="flex flex-wrap justify-between items-center ">
           <Link to={"/"}>
             <img
-              src={companyLogo}
+              src={companyLogo2}
               alt="company logo"
               className="h-20 w-20 ml-8 lg:h-16 lg:w-40 lg:ml-8"
             />
           </Link>
 
-          <div className="relative flex-1 hidden lg:block ml-[420px]">
+          <div className="relative hidden lg:flex justify-between ml-[520px]">
             <MdOutlineSearch className="absolute top-1/2 transform -translate-y-1/2 left-3 h-6 w-6 text-white" />
             <input
               type="text"
               placeholder="Search"
               className="w-full lg:w-[400px] pl-10 pr-4 py-2 h-10 bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white"
             />
+            <button className="bg-companyWhite text-center hidden lg:block w-20 h-10 lg:mr-[10px] text-companyRed rounded-3xl hover:bg-slate-200 ">
+              <Link to={"login"}> Sign in </Link>
+            </button>
           </div>
+        </div>
           <button
-            className="inline-flex items-center p-2 mr-10 text-sm text-white rounded-lg lg:hidden hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-black dark:text-black dark:hover:bg-red-700 dark:focus:ring-black"
+            className="inline-flex items-center p-2 ml-auto mr-[20px] text-sm text-white rounded-lg lg:hidden hover:bg-red-700"
             aria-controls="navbar-solid-bg"
             aria-expanded={isOpen}
             onClick={toggle}
           >
-            <BiMenuAltLeft className="h-9 w-9" />
+            {isOpen ? <BiX className="h-9 w-9" /> : <BiMenuAltLeft className="h-9 w-9" />}
           </button>
-          <button className="bg-companyWhite text-center hidden lg:block w-20 h-10 lg:mr-20 text-companyRed rounded-3xl hover:bg-slate-200 ">
-            <Link to={"login"}> Sign in </Link>{" "}
-          </button>
-        </div>
 
         <div className="flex flex-wrap justify-between items-center pb-2 ">
           <div className="relative flex-1  mx-4 lg:hidden">
@@ -75,16 +74,15 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="w-[200px] pl-10 pr-4 py-2 h-[30px] bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white"
+              className="w-[235px] pl-10 pr-4 py-2 h-[30px] bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white"
             />
           </div>
-          <button className="bg-companyWhite text-center w-[70px] h-[30px] mr-10 lg:hidden text-companyRed rounded-3xl hover:bg-slate-200 ">
-            {" "}
-            <Link to={"login"}> Sign in </Link>{" "}
+          <button className="bg-companyWhite text-center w-[75px] h-[35px] mr-[10px] lg:hidden text-companyRed rounded-3xl hover:bg-slate-200 ">
+            <Link to={"login"}> Sign in </Link>
           </button>
         </div>
 
-        <nav className="hidden lg:block ">
+        <nav className="hidden lg:block">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
             <div
               className={`w-full lg:block lg:w-auto ${
@@ -194,7 +192,7 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-      <nav className="w-60 mx-auto fixed right-0 lg:hidden z-40">
+      <nav className="w-60 mx-auto fixed right-4 lg:hidden z-40">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <div
             className={`w-full lg:block lg:w-auto ${
