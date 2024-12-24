@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <>
       <Ads />
-      <div className="bg-companyRed font-Nunito lg:p-10 ">
-        <div className="pt-10 lg:p-3 px-10 lg:px-0 font-bold text-[20px]  text-white">
+      <div className="bg-companyRed font-Nunito p-1 lg:p-10 ">
+        <div className="pt-10 lg:p-3 pl-5 lg:px-[175px] font-bold text-[24px] lg:text-[30px]  text-white">
           <p className="">Trending News</p>
         </div>
         <div className="bg-companyRed -mt-[80px] lg:mt-0 ">

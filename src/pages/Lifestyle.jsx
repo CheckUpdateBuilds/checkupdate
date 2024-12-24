@@ -84,7 +84,7 @@ const Lifestyle = () => {
           </div>
           
 
-          <div className=" lg:w-1/2 lg:ml-[16px] lg:-mt-[70px]">
+          <div className=" lg:w-1/2 lg:ml-[16px] lg:-mt-[10px]">
            <div className="text-xl px-10 pt-1 font-bold font-Nunito ">
               <p>Latest Videos</p>
             </div>

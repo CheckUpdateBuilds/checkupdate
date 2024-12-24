@@ -19,8 +19,10 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Ads from './Components/Ads';
 import LoginSignUp from './Components/LoginSignUp/LoginSignUp';
+import ScrollToTop from './Components/ScrollToTop';
 // import Subscribe from './Components/Subscribe';
 // import LoginSignUp from './pages/LoginSignUp'
+
 
 
 
@@ -29,8 +31,7 @@ function App() {
   return (
     <div className='overflow-hidden'>
       <Navbar/>
-      {/* <div className="bg-transparent block lg:hidden " ></div> */}
-      {/* <Ads/> */}
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/sports' element={<Sports/>} />

@@ -1,5 +1,5 @@
 // import React from 'react'
-import companyLogo from '../assets/logo2.svg'
+import companyLogo from '../assets/logo4.svg'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
@@ -11,7 +11,7 @@ const Footer = () => {
     <>
     
         <div className="bg-black h-[700px] lg:h-96 font-Nunito lg:px-12 ">
-          <div className="pt-6 pl-0 lg:pt-6 lg:pl-9 flex justify-between">
+          <div className="pt-6 pl-4 lg:pt-6 lg:pl-9 flex justify-between">
             <Link to={'/'} ><img className="w-[100px] " src={companyLogo} alt="CheckUpdate Logo" /></Link>
             <a className="flex text-white underline" href="#">Back to top <MdArrowUpward className="w-6 h-6"/> </a>
           </div>

@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import companyLogo from '../Assets/logo1.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faFacebook, faGoogle, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 
 const LoginSignUp = () => {
   const emailref = useRef(null);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleEmailSubmit = (event) => {
     event.preventDefault();
     const email = emailref.current.value;
     localStorage.setItem('userEmail', email);
-    // navigate('/');
+    navigate('/');
   };
 
   return (
@@ -59,7 +59,7 @@ const LoginSignUp = () => {
           </div>
 
           <button className='py-2 px-4 bg-companyRed text-white rounded-full ' onClick={handleEmailSubmit}>
-            <Link to={'/'} >Continue</Link>
+            Continue
           </button>
         </div>
       </div>
