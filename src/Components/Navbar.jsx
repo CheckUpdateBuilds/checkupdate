@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(".navbar") && isOpen) {
+      if (!event.target.closest(".navbar") && !event.target.closest("a") && isOpen) {
         setIsOpen(false);
       }
     };
@@ -74,7 +74,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="w-[235px] pl-10 pr-4 py-2 h-[30px] bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white"
+              className="w-[200px] pl-10 pr-4 py-2 h-[30px] bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white"
             />
           </div>
           <button className="bg-companyWhite text-center w-[75px] h-[35px] mr-[10px] lg:hidden text-companyRed rounded-3xl hover:bg-slate-200 ">
