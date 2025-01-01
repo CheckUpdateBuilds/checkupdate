@@ -15,6 +15,7 @@ const LoginSignUp = () => {
     const email = emailref.current.value;
     localStorage.setItem('userEmail', email);
     navigate('/');
+    alert("Welcome...")
   };
 
   return (
