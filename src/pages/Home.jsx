@@ -131,8 +131,12 @@ const Home = () => {
           </div>
 
 
+
         </section>
         
+          <div className="lg:hidden" >
+            <Subscribe />
+          </div>
       </div>
     </>
   );
