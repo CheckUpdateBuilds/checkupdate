@@ -49,7 +49,7 @@ function App() {
         <Route path='*' element={<NotFound/>} />
         
       </Routes>
-      {/* <Subscribe/> */}
+      {/* <Subscribe className="lg:hidden" /> */}
       <Ads/>
       <Footer/>
       
