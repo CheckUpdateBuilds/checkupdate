@@ -8,6 +8,7 @@ import VideoCard from "../Components/VideoCard";
 import { trendingNewData } from "../trendingNewsData";
 import { VideoNewsData } from "../VideoNewsData";
 import Carousel from "../Components/Carousel";
+import { Link } from "react-router-dom";
 // import LoginSignUp from "../Components/LoginSignUp/LoginSignUp";
 
 
