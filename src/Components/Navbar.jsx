@@ -82,7 +82,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <nav className="hidden lg:block">
+        <nav className="hidden md:block">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
             <div
               className={`w-full lg:block lg:w-auto ${
@@ -192,7 +192,7 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-      <nav className="w-60 mx-auto fixed right-4 lg:hidden z-40">
+      <nav className="w-60 mx-auto fixed right-4 md:hidden z-40">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <div
             className={`w-full lg:block lg:w-auto ${
