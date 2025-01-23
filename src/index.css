@@ -1,3 +1,204 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    transition: margin-left .3s ease;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #C43737;
+    padding-top: 40px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #a33333;
+    padding-left: 35px;
+}
+
+.sidebar a .icon {
+    margin-right: 15px;
+}
+
+.sidebar .nav-item.active a {
+    background-color: #a33333;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.content {
+    margin-left: 250px;
+    transition: margin-left .3s ease;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: #C43737;
+}
+
+.header .notifications {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.header .menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .header .menu-toggle {
+        display: block;
+    }
+}
+
+/* Styling for Cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #C43737;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.widget-stat {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-action {
+    color: #C43737;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-action:hover {
+    text-decoration: underline;
+}
+
+.admin-header {
+    position: ;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1001;
+}
+
+.admin-header h1 {
+    margin: 0;
+    color: #c43737;
+    font-size: 24px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notifications {
+    font-size: 22px;
+    cursor: pointer;
+    color: #333;
+}
+
+.notifications:hover {
+    color: #c43737;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    margin-top: 10px;
+    /* Ensure content starts below the fixed header */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
