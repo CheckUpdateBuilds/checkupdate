@@ -11,11 +11,12 @@ const Ads = () => {
           <div className="bg-companyWhite h-[20px]"></div>
       </div>
 
-      <div className="hidden lg:block bg-companyLightRed font-Nunito rounded-3xl mt-10 mr-10 absolute ">
-        <div className="rounded-3xl text-3xl bg-companyWhite p-4 m-5 text-center font-bold relative">
+      <div className="hidden lg:block bg-companyLightRed font-Nunito rounded-3xl mt-10 p-10">
+        <div className="rounded-3xl text-3xl bg-companyWhite p-10 m-5 text-center font-bold relative">
           <p>Advertise Your Products and Services Here!!!</p>
         </div>
       </div>
+      <div className="bg-companyWhite h-[20px]"></div>
     </>
   )
 }

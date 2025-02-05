@@ -8,6 +8,7 @@ import VideoCard from "../Components/VideoCard";
 import { trendingNewData } from "../trendingNewsData";
 import { VideoNewsData } from "../VideoNewsData";
 import Carousel from "../Components/Carousel";
+// import { Link } from "react-router-dom";
 // import LoginSignUp from "../Components/LoginSignUp/LoginSignUp";
 
 
@@ -19,18 +20,18 @@ const Home = () => {
         <div className="pt-10 lg:p-3 pl-5 lg:px-[175px] font-bold text-[24px] lg:text-[30px]  text-white">
           <p className="">Trending News</p>
         </div>
-        <div className="bg-companyRed -mt-[80px] lg:mt-0 ">
+        <div className="bg-companyRed -mt-[80px] md:mt-0 ">
           <Carousel />
         </div>
       </div>
 
-      <div className="bg-companyWhite font-Nunito lg:p-10">
-        <section className="lg:w-fit lg:flex lg:justify-between lg:space-x-12 " >
+      <div className="bg-companyWhite font-Nunito md:p-10">
+        <section className="md:w-fit lg:flex md:justify-between md:space-x-12 " >
           <div className="" >
             <div className="p-2 my-2 text-3xl">
               <p>Top Stories</p>
             </div>
-            <div className="grid grid-cols-2 lg:p-10 lg:px-0 lg:gap-5">
+            <div className="grid grid-cols-2 md:p-10 md:px-0 md:gap-5">
               {trendingNewData.map((newsData, index) => (
                 <Card2
                   key={index}
@@ -42,13 +43,13 @@ const Home = () => {
                 /> 
               ))}
             </div>
-            <div className="block lg:hidden" >
+            <div className="block md:hidden" >
               <Ads />
             </div>
           </div>
           
 
-          <div className=" lg:w-1/2 lg:ml-[16px] lg:mt-[120px] " >
+          <div className=" lg:w-1/2 md:ml-[16px] md:mt-[120px] " >
            <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
               <p>Most Watched This Week</p>
             </div>
@@ -69,9 +70,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="lg:w-fit lg:flex justify-between " >
+        <section className="md:w-fit lg:flex md:justify-between md:space-x-12 " >
 
-          <div className="block lg:hidden" >
+          <div className="block md:ml-[16px] lg:hidden" >
               <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
                 <p>Recommended For You</p>
               </div>
@@ -93,7 +94,7 @@ const Home = () => {
             <div className="p-2 my-2 text-3xl">
               <p>Latest Stories</p>
             </div>
-            <div className="grid grid-cols-2 lg:p-10 lg:px-0 lg:gap-5">
+            <div className="grid grid-cols-2 md:p-10 md:px-0 md:-ml-10 lg:-ml-0 md:gap-5">
               {trendingNewData.map((newsData, index) => (
                 <Card2
                   key={index}
