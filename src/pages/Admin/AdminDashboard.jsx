@@ -6,9 +6,8 @@ import Header from "../../Components/Admin/Header";
 const AdminDashboard = () => {
   return (
     <div className="admin-dashboard">
-      <Sidebar />
-      <div className="content">
-      <Header />
+
+      
         <div className="row mt-4">
           {/* Widgets */}
           {[
@@ -83,7 +82,7 @@ const AdminDashboard = () => {
             </div>
           ))}
         </div>
-      </div>
+      
     </div>
   );
 };

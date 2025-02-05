@@ -1,5 +1,5 @@
-import { Route, Routes, useLocation } from 'react-router-dom'; 
-import './App.css' 
+import { Route, Routes, useLocation } from 'react-router-dom';
+import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './pages/Home';
 import Sports from './pages/Sports';
@@ -19,20 +19,27 @@ import Footer from './Components/Footer';
 import Ads from './Components/Ads';
 import LoginSignUp from './Components/LoginSignUp/LoginSignUp';
 import ScrollToTop from './Components/ScrollToTop';
-import Sidebar from './Components/Admin/sidebar';
-import AdminPage from "./pages/Admin/AdminDashboard";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
 import ContentManagement from "./pages/Admin/ContentManagement";
 import UserManagement from "./pages/Admin/UserManagement";
 import Analytics from "./pages/Admin/Analytics";
+import AdminSettings from "./pages/Admin/AdminSetting";
+import EditorsDashboard from './pages/Editor/Dashboard';
+import EditorsArticle from './pages/Editor/My Articles';
+import ArticlePerformance from './pages/Editor/Article Performance';
+import CreateArticle from './pages/Editor/Create Article';
+import { MdAdminPanelSettings } from 'react-icons/md';
+import AdminLayout from './layout/AdminLayout';
+import EditorsLayout from './layout/EditorsLayout';
 
 function App() {
   const location = useLocation();
-  
+
 
   return (
     <div className='overflow-hidden'>
       {/* Conditionally render Navbar, Ads, and Footer based on the current path */}
-      {location.pathname !== '/Admin' && <Navbar />}
+      {location.pathname == 'Admin/' && <Navbar />}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -49,15 +56,24 @@ function App() {
         <Route path='/awards' element={<CheckUpdateAwards />} />
         <Route path='/login' element={<LoginSignUp />} />
         <Route path='*' element={<NotFound />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="admin/ContentManagement" element={<ContentManagement />} />
-        <Route path="admin/UserManagement" element={<UserManagement />} />
-        <Route path="admin/Analytics" element={<Analytics />} />
-
+        <Route path='Admin' element={<AdminLayout />}>
+          <Route path="Settings" element={<AdminSettings />} />
+          <Route path="Dashboard" element={<AdminDashboard />} />
+          <Route path="ContentManagement" element={<ContentManagement />} />
+          <Route path="UserManagement" element={<UserManagement />} />
+          <Route path="Analytics" element={<Analytics />} />
+          <Route path="Settings" element={<AdminSettings />} />
+        </Route>
+        <Route path='Editor' element={<EditorsLayout />}>
+          <Route path="Dashboard" element={<EditorsDashboard />} />
+          <Route path="Articles" element={<EditorsArticle />} />
+          <Route path="ArticlePerformance" element={<ArticlePerformance />} />
+          <Route path="CreateArticle" element={<CreateArticle />} />
+        </Route>
       </Routes>
       {/* Conditionally render Ads and Footer based on the current path */}
-      {location.pathname !== '/Admin' && <Ads />}
-      {location.pathname !== '/Admin' && <Footer />}
+      {location.pathname == 'Admin/' && <Ads />}
+      {location.pathname == 'Admin/' && <Footer />}
     </div>
   );
 }

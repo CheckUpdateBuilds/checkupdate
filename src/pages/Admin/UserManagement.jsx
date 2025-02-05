@@ -1,7 +1,5 @@
 // pages/UserManagement.js
 import React, { useState } from "react";
-import Sidebar from "../../Components/Admin/sidebar";
-import Header from "../../Components/Admin/Header";
 import UserTable from "../../Components/Admin/UserTable";
 import AddUserModal from "../../Components/Admin/AddUserModal";
 import EditUserModal from "../../Components/Admin/EditUserModal";
@@ -11,15 +9,15 @@ const UserManagement = () => {
   const [users, setUsers] = useState([
     {
       id: 1,
-      name: "John Doe",
-      email: "johndoe@example.com",
+      name: "John Olu",
+      email: "johnolu@example.com",
       role: "Editor",
       status: "Active",
     },
     {
       id: 2,
-      name: "Jane Smith",
-      email: "janesmith@example.com",
+      name: "Ade Smith",
+      email: "adesmith@gmail.com",
       role: "Admin",
       status: "Inactive",
     },
@@ -41,9 +39,6 @@ const UserManagement = () => {
 
   return (
     <div className="app">
-      <Sidebar />
-      <div className="content">
-        <Header title="User Management" />
         <div className="user-actions">
           <button
             className="btn"
@@ -58,6 +53,7 @@ const UserManagement = () => {
             placeholder="Search User..."
           />
         </div>
+        <br/>
         <UserTable
           users={users}
           onEditUser={(user) => setEditingUser(user)}
@@ -65,7 +61,6 @@ const UserManagement = () => {
         />
         <AddUserModal onAddUser={addUser} />
         <EditUserModal user={editingUser} onEditUser={editUser} />
-      </div>
     </div>
   );
 };
