@@ -1,8 +1,6 @@
-// Analytics.jsx
 import React, { useEffect } from "react";
 import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
-
 
 const Analytics = () => {
   useEffect(() => {
@@ -24,8 +22,16 @@ const Analytics = () => {
       "2025-01-07",
     ];
 
+    // Store chart instances to be destroyed later
+    let trafficChart, topArticlesChart, dateTrafficChart;
+
+    // Destroy existing charts (if any) before creating new ones
+    if (trafficChart) trafficChart.destroy();
+    if (topArticlesChart) topArticlesChart.destroy();
+    if (dateTrafficChart) dateTrafficChart.destroy();
+
     // Traffic Overview Chart (Line chart)
-    new Chart(document.getElementById("trafficChart"), {
+    trafficChart = new Chart(document.getElementById("trafficChart"), {
       type: "line",
       data: {
         labels: trafficLabels,
@@ -49,7 +55,7 @@ const Analytics = () => {
     });
 
     // Top-performing Articles Chart (Bar chart)
-    new Chart(document.getElementById("topArticlesChart"), {
+    topArticlesChart = new Chart(document.getElementById("topArticlesChart"), {
       type: "bar",
       data: {
         labels: topArticlesLabels,
@@ -73,7 +79,7 @@ const Analytics = () => {
     });
 
     // Traffic by Date Chart (Bar chart)
-    new Chart(document.getElementById("dateTrafficChart"), {
+    dateTrafficChart = new Chart(document.getElementById("dateTrafficChart"), {
       type: "bar",
       data: {
         labels: dateTrafficLabels,
@@ -95,12 +101,18 @@ const Analytics = () => {
         },
       },
     });
+
+    // Cleanup function to destroy charts on component unmount
+    return () => {
+      if (trafficChart) trafficChart.destroy();
+      if (topArticlesChart) topArticlesChart.destroy();
+      if (dateTrafficChart) dateTrafficChart.destroy();
+    };
   }, []);
 
   return (
     <div className="d-flex">
-      <div className="content w-100">
-
+      <div className="content-page w-100">
         <div className="container mt-4">
           {/* Filters (Date Range) */}
           <div className="d-flex justify-content-between align-items-center my-3">

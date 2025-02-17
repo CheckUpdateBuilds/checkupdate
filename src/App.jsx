@@ -57,7 +57,6 @@ function App() {
         <Route path='/login' element={<LoginSignUp />} />
         <Route path='*' element={<NotFound />} />
         <Route path='Admin' element={<AdminLayout />}>
-          <Route path="Settings" element={<AdminSettings />} />
           <Route path="Dashboard" element={<AdminDashboard />} />
           <Route path="ContentManagement" element={<ContentManagement />} />
           <Route path="UserManagement" element={<UserManagement />} />

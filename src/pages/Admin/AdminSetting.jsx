@@ -1,7 +1,5 @@
 // AdminSetting.jsx
 import  { useState } from "react";
-import Sidebar from "../../Components/Admin/sidebar";
-import Header from "../../Components/Admin/Header";
 
 
 function AdminSettings() {

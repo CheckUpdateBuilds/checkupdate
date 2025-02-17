@@ -4,12 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTachometerAlt, faNewspaper, faEdit, faChartLine } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-const Dashboard = () => {
+const ChartComponent = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  
   return (
     <div className="">
-     
 
         {/* Articles Table */}
         <div className="table-responsive mt-4">
@@ -62,4 +61,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ChartComponent;

@@ -47,6 +47,45 @@ body {
     background-color: #a33333;
     font-weight: bold;
 }
+.sidebar.collapsed .nav-item {
+  text-align: center;
+}
+
+.sidebar.collapsed .icon {
+  font-size: 18px;
+  display: block;
+}
+
+/*
+ Style for sidebar 
+.sidebar {
+    width: 250px;
+    transition: width 0.3s;
+  }
+  
+
+  .sidebar.collapsed {
+    width: 80px;
+  }
+  
+
+  .hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .sidebar.collapsed .nav-item {
+    text-align: center;
+  }
+  
+  .sidebar.collapsed .icon {
+    font-size: 18px;
+    display: block;
+  }
+*/  
+
 
 /* Main Content Area */
 .content {
@@ -62,11 +101,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: relative ;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1001;
 }
 
 .header h1 {
     margin: 0;
     color: #C43737;
+    font-size: 24px;
 }
 
 .header .notifications {
@@ -141,26 +190,6 @@ body {
     text-decoration: underline;
 }
 
-.admin-header {
-    position: ;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    z-index: 1001;
-}
-
-.admin-header h1 {
-    margin: 0;
-    color: #c43737;
-    font-size: 24px;
-}
 
 .header-right {
     display: flex;
@@ -202,3 +231,28 @@ body {
     padding: 20px;
     transition: margin-left 0.3s ease;
 }
+.content-page{
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    margin-top: 20px;
+}
+
+.metric-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .metric-card h4 {
+    color: #C43737;
+  }
+  
+  .metric-card .metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
