@@ -6,12 +6,12 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const ChartComponent = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  
+
   return (
-    <div className="">
+    <div className="content-page">
 
         {/* Articles Table */}
-        <div className="table-responsive mt-4">
+        <div className="table-responsive mt-4 ">
           <table className="table table-striped">
             <thead>
               <tr>
