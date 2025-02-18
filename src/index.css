@@ -19,7 +19,7 @@ body {
     background-color: #C43737;
     padding-top: 40px;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .sidebar a {
@@ -52,41 +52,26 @@ body {
 }
 
 .sidebar.collapsed .icon {
-  font-size: 18px;
+  font-size: 30px;
   display: block;
 }
 
-/*
- Style for sidebar 
-.sidebar {
-    width: 250px;
-    transition: width 0.3s;
-  }
-  
-
-  .sidebar.collapsed {
+/* We can add this to it later and do some customizations
+.sidebar.collapsed {
     width: 80px;
-  }
-  
-
-  .hamburger-btn {
+}
+*/
+.menu-btn {
+    display: none;
     background: none;
     border: none;
     font-size: 30px;
     cursor: pointer;
-  }
-  
-  .sidebar.collapsed .nav-item {
-    text-align: center;
-  }
-  
-  .sidebar.collapsed .icon {
-    font-size: 18px;
-    display: block;
-  }
-*/  
+}
 
-
+.menu-btn:hover{
+    color: #C43737;
+}
 /* Main Content Area */
 .content {
     margin-left: 250px;
@@ -109,7 +94,7 @@ body {
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    z-index: 1001;
+    z-index: 1000;
 }
 
 .header h1 {
@@ -123,28 +108,27 @@ body {
     cursor: pointer;
 }
 
-.header .menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     .sidebar {
-        left: -250px;
+        left: 0px;
         transition: all 0.3s ease;
     }
 
     .sidebar.open {
         left: 0;
     }
+    
+    .sidebar.collapsed {
+        display: none;
+    }
 
     .content {
         margin-left: 0;
     }
 
-    .header .menu-toggle {
+    .header .menu-btn {
         display: block;
     }
 }
@@ -227,7 +211,6 @@ body {
 
 .content {
     margin-top: 10px;
-    /* Ensure content starts below the fixed header */
     padding: 20px;
     transition: margin-left 0.3s ease;
 }
