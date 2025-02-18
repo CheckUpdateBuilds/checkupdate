@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { FaBars } from "react-icons/fa";  // Import the hamburger icon
+import { FaBars } from "react-icons/fa";  // Import the menu icon
 import { FaBell } from 'react-icons/fa';
 
 const Header = ({ toggleSidebar }) => {
@@ -36,8 +36,8 @@ const Header = ({ toggleSidebar }) => {
           />
         </div>
         
-        {/* Hamburger Icon */}
-        <button className="hamburger-btn" onClick={toggleSidebar}>
+        {/* menu Icon */}
+        <button className="menu-btn" onClick={toggleSidebar}>
           <FaBars />
         </button>
       </div>

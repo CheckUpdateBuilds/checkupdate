@@ -53,7 +53,7 @@ const EditorDashboard = () => {
                   <p>{task.buttonText ? "" : "Views"}</p>
                 </div>
                 <div className="card-footer text-center">
-                  <a href="#" className="card-action">{task.action}</a>
+                  <a href="CreateArticle" className="card-action">{task.action}</a>
                 </div>
               </div>
             </div>

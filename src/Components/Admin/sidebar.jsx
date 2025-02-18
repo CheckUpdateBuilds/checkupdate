@@ -1,9 +1,9 @@
 import React from "react";
 //import "./index.css"; // Optional: External CSS for Sidebar
 
-const Sidebar = () => {
+const Sidebar = ({ isCollapsed }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="container-fluid">
         <ul className="nav flex-column">
           <li className="nav-item active">

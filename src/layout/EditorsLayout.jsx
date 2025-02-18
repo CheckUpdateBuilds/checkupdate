@@ -5,17 +5,17 @@ import Sidebar from '../Components/Editor/sidebar'
 
 
 const AdminLayout = props => {
-    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
 
     const toggleSidebar = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
-  };
+        setIsSidebarCollapsed(!isSidebarCollapsed);
+    };
 
     return (
         <div className="editors-settings">
-            <Sidebar />
+            <Sidebar isCollapsed={isSidebarCollapsed} />
             <div className="content">
-                <Header />
+            <Header toggleSidebar={toggleSidebar} />
                 <div>
                     <Outlet />
                 </div>
@@ -23,7 +23,5 @@ const AdminLayout = props => {
   </div>
     )
 }
-
-
 
 export default AdminLayout

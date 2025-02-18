@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom'
 import Header from '../Components/Admin/Header'
 import Sidebar from '../Components/Admin/sidebar'
 
 
 const AdminLayout = props => {
+    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
+    
+    const toggleSidebar = () => {
+        setIsSidebarCollapsed(!isSidebarCollapsed);
+    };
+    
     return (
         <div className="admin-settings">
-            <Sidebar />
+            <Sidebar isCollapsed={isSidebarCollapsed} />
             <div className="content">
-                <Header />
+            <Header toggleSidebar={toggleSidebar} />
                 <div>
                     <Outlet />
                 </div>
