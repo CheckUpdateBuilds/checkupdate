@@ -34,12 +34,12 @@ import EditorsLayout from './layout/EditorsLayout';
 function App() {
   const location = useLocation();
 
-  const isAdminOrEditorPath = location.pathname.startsWith('/admin') || location.pathname.startsWith('/editor');
+  const isAdminOrEditorPath = location.pathname.startsWith('/admin') && location.pathname.startsWith('/editor');
 
   return (
     <div className='overflow-hidden bg-companyWhite '>
       {/* Conditionally render Navbar, Ads, and Footer based on the current path */}
-      {!isAdminOrEditorPath && <Navbar />}
+      {isAdminOrEditorPath && <Navbar />}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -56,11 +56,8 @@ function App() {
         <Route path='/awards' element={<CheckUpdateAwards />} />
         <Route path='/login' element={<LoginSignUp />} />
         <Route path='*' element={<NotFound />} />
-<<<<<<< HEAD
-        <Route path='/admin' element={<Navigate to="/admin/dashboard" />} /> {/* Redirects /admin to /admin/dashboard */}
-=======
 
->>>>>>> e6e809a18ed6f363f388748bb14f6ac238f7eb0b
+        <Route path='/admin' element={<Navigate to="/admin/dashboard" />} /> {/* Redirects /admin to /admin/dashboard */}
         <Route path='Admin' element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
           <Route path="ContentManagement" element={<ContentManagement />} />
@@ -68,11 +65,8 @@ function App() {
           <Route path="Analytics" element={<Analytics />} />
           <Route path="Settings" element={<AdminSettings />} />
         </Route>
-<<<<<<< HEAD
+        
         <Route path='/Editor' element={<Navigate to="/Editor/dashboard" />} />
-=======
-
->>>>>>> e6e809a18ed6f363f388748bb14f6ac238f7eb0b
         <Route path='Editor' element={<EditorsLayout />}>
           <Route index element={<EditorsDashboard />} />
           <Route path="Articles" element={<EditorsArticle />} />
@@ -80,8 +74,8 @@ function App() {
           <Route path="CreateArticle" element={<CreateArticle />} />
         </Route>
       </Routes>
-      {!isAdminOrEditorPath && <Ads />}
-      {!isAdminOrEditorPath && <Footer />}
+      {isAdminOrEditorPath && <Ads />}
+      {isAdminOrEditorPath && <Footer />}
     </div>
   );
 }
