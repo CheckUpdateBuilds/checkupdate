@@ -1,5 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaTachometerAlt, FaNewspaper, FaEdit, FaChartLine } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 const Sidebar = ({ isCollapsed }) => {
     return (
@@ -7,21 +10,24 @@ const Sidebar = ({ isCollapsed }) => {
             <div className="container-fluid">
                 <ul className="nav flex-column">
                     <li className="nav-item active">
-                        <a href="Dashboard"><FaTachometerAlt className="icon" /> Dashboard</a>
+                        <Link to={"Dashboard"}><FaTachometerAlt className="icon" /> Dashboard</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="Articles"><FaNewspaper className="icon" /> My Articles</a>
+                        <Link to={"Articles"}><FaNewspaper className="icon" /> My Articles</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="CreateArticle"><FaEdit className="icon" /> Create Article</a>
+                        <Link to={"CreateArticle"}><FaEdit className="icon" /> Create Article</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="ArticlePerformance"><FaChartLine className="icon" /> Article Performance</a>
+                        <Link to={"ArticlePerformance"}><FaChartLine className="icon" /> Article Performance</Link>
                     </li>
                 </ul>
             </div>
         </div>
     );
+};
+Sidebar.propTypes = {
+    isCollapsed: PropTypes.bool.isRequired,
 };
 
 export default Sidebar;

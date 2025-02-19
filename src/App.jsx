@@ -28,18 +28,18 @@ import EditorsDashboard from './pages/Editor/Dashboard';
 import EditorsArticle from './pages/Editor/My Articles';
 import ArticlePerformance from './pages/Editor/Article Performance';
 import CreateArticle from './pages/Editor/Create Article';
-import { MdAdminPanelSettings } from 'react-icons/md';
 import AdminLayout from './layout/AdminLayout';
 import EditorsLayout from './layout/EditorsLayout';
 
 function App() {
   const location = useLocation();
 
+  const isAdminOrEditorPath = location.pathname.startsWith('/admin') || location.pathname.startsWith('/editor');
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden bg-companyWhite '>
       {/* Conditionally render Navbar, Ads, and Footer based on the current path */}
-      {location.pathname == 'Admin/' && <Navbar />}
+      {!isAdminOrEditorPath && <Navbar />}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -56,25 +56,32 @@ function App() {
         <Route path='/awards' element={<CheckUpdateAwards />} />
         <Route path='/login' element={<LoginSignUp />} />
         <Route path='*' element={<NotFound />} />
+<<<<<<< HEAD
         <Route path='/admin' element={<Navigate to="/admin/dashboard" />} /> {/* Redirects /admin to /admin/dashboard */}
+=======
+
+>>>>>>> e6e809a18ed6f363f388748bb14f6ac238f7eb0b
         <Route path='Admin' element={<AdminLayout />}>
-          <Route path="Dashboard" element={<AdminDashboard />} />
+          <Route index element={<AdminDashboard />} />
           <Route path="ContentManagement" element={<ContentManagement />} />
           <Route path="UserManagement" element={<UserManagement />} />
           <Route path="Analytics" element={<Analytics />} />
           <Route path="Settings" element={<AdminSettings />} />
         </Route>
+<<<<<<< HEAD
         <Route path='/Editor' element={<Navigate to="/Editor/dashboard" />} />
+=======
+
+>>>>>>> e6e809a18ed6f363f388748bb14f6ac238f7eb0b
         <Route path='Editor' element={<EditorsLayout />}>
-          <Route path="Dashboard" element={<EditorsDashboard />} />
+          <Route index element={<EditorsDashboard />} />
           <Route path="Articles" element={<EditorsArticle />} />
           <Route path="ArticlePerformance" element={<ArticlePerformance />} />
           <Route path="CreateArticle" element={<CreateArticle />} />
         </Route>
       </Routes>
-      {/* Conditionally render Ads and Footer based on the current path */}
-      {location.pathname == 'Admin/' && <Ads />}
-      {location.pathname == 'Admin/' && <Footer />}
+      {!isAdminOrEditorPath && <Ads />}
+      {!isAdminOrEditorPath && <Footer />}
     </div>
   );
 }
