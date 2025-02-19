@@ -1,5 +1,6 @@
-import React from "react";
+// import React from "react";
 //import "./index.css"; // Optional: External CSS for Sidebar
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -7,29 +8,29 @@ const Sidebar = () => {
       <div className="container-fluid">
         <ul className="nav flex-column">
           <li className="nav-item active">
-            <a href="Dashboard">
+            <Link to={'Dashboard'}>
               <i className="fas fa-tachometer-alt icon"></i>Dashboard
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="UserManagement">
+            <Link to={'UserManagement'}>
               <i className="fas fa-users icon"></i>User Management
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="ContentManagement">
+            <Link to={'ContentManagement'}>
               <i className="fas fa-newspaper icon"></i>Content Management
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="Analytics">
+            <Link to={'Analytics'}>
               <i className="fas fa-chart-line icon"></i>Analytics
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="Settings">
+            <Link to={'Settings'}>
               <i className="fas fa-cogs icon"></i>Settings
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
