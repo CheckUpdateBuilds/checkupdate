@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './pages/Home';
@@ -56,6 +56,7 @@ function App() {
         <Route path='/awards' element={<CheckUpdateAwards />} />
         <Route path='/login' element={<LoginSignUp />} />
         <Route path='*' element={<NotFound />} />
+        <Route path='/admin' element={<Navigate to="/admin/dashboard" />} /> {/* Redirects /admin to /admin/dashboard */}
         <Route path='Admin' element={<AdminLayout />}>
           <Route path="Dashboard" element={<AdminDashboard />} />
           <Route path="ContentManagement" element={<ContentManagement />} />
@@ -63,6 +64,7 @@ function App() {
           <Route path="Analytics" element={<Analytics />} />
           <Route path="Settings" element={<AdminSettings />} />
         </Route>
+        <Route path='/Editor' element={<Navigate to="/Editor/dashboard" />} />
         <Route path='Editor' element={<EditorsLayout />}>
           <Route path="Dashboard" element={<EditorsDashboard />} />
           <Route path="Articles" element={<EditorsArticle />} />
