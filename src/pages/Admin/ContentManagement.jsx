@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "../../Components/Admin/sidebar";
 import Header from "../../Components/Admin/Header";
-import ContentTable from "../../components/admin/ContentTable";
-import Pagination from "../../components/admin/Pagination";
+import ContentTable from "../../Components/Admin/ContentTable";
+import Pagination fromm "../../Components/Admin/Pagination";
 
 
 const ContentManagement = () => {
