@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../../Components/Admin/sidebar";
 import Header from "../../Components/Admin/Header";
 import ContentTable from "../../Components/Admin/ContentTable";
-import Pagination fromm "../../Components/Admin/Pagination";
+import Pagination from "../../Components/Admin/Pagination";
 
 
 const ContentManagement = () => {
