@@ -19,10 +19,30 @@ const EditorDashboard = () => {
         {/* Dashboard Widgets */}
         <div className="row mt-4">
           {[
-            { title: "Pending Articles", count: 3, action: "View Pending Articles" },
-            { title: "Published Articles", count: 15, action: "View Published" },
-            { title: "Draft Articles", count: 5, action: "Edit Drafts" },
-            { title: "Rejected Articles", count: 2, action: "View Rejected" },
+            {
+              title: "Pending Articles",
+              count: 3,
+              action: "View Pending Articles",
+              link: "Articles",
+            },
+            { 
+              title: "Published Articles", 
+              count: 15, 
+              action: "View Published",
+              link: "Articles",
+            },
+            { 
+              title: "Draft Articles", 
+              count: 5, 
+              action: "Edit Drafts",
+              link: "Articles",
+            },
+            { 
+              title: "Rejected Articles", 
+              count: 2, 
+              action: "View Rejected",
+              link: "Articles",
+            },
           ].map((widget, index) => (
             <div key={index} className="col-lg-3 col-md-6 mb-4">
               <div className="card">
@@ -32,7 +52,7 @@ const EditorDashboard = () => {
                   <p>{widget.title.split(" ")[0]} Articles</p>
                 </div>
                 <div className="card-footer text-center">
-                  <a href="#" className="card-action">{widget.action}</a>
+                  <a href={widget.link} className="card-action">{widget.action}</a>
                 </div>
               </div>
             </div>
@@ -42,8 +62,18 @@ const EditorDashboard = () => {
         {/* Editor Tasks */}
         <div className="row mt-5">
           {[
-            { title: "Create New Article", buttonText: "Create Article", action: "Start Writing" },
-            { title: "Article Performance", stat: 500, action: "View Performance" },
+            { 
+              title: "Create New Article", 
+              buttonText: "Create Article", 
+              action: "Start Writing",
+              link: "CreateArticle",
+            },
+            { 
+              title: "Article Performance", 
+              stat: 500, 
+              action: "View Performance",
+              link: "ArticlePerformance",
+            },
           ].map((task, index) => (
             <div key={index} className="col-lg-6 col-md-6 mb-4">
               <div className="card">
@@ -53,7 +83,7 @@ const EditorDashboard = () => {
                   <p>{task.buttonText ? "" : "Views"}</p>
                 </div>
                 <div className="card-footer text-center">
-                  <a href="CreateArticle" className="card-action">{task.action}</a>
+                  <a href={task.link} className="card-action">{task.action}</a>
                 </div>
               </div>
             </div>

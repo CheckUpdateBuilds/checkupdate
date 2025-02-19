@@ -16,24 +16,28 @@ const AdminDashboard = () => {
               value: 8,
               description: "Articles Awaiting Approval",
               action: "Approve Articles",
+              link: "ContentManagement",
             },
             {
               title: "Active Users",
               value: 25,
               description: "Users",
               action: "View Users",
+              link: "UserManagement",
             },
             {
               title: "Published Articles",
               value: 120,
               description: "Articles",
               action: "View Published",
+              link: "ContentManagement",
             },
             {
               title: "Site Traffic",
               value: "50,000",
               description: "Visits",
               action: "View Traffic",
+              link: "Analytics",
             },
           ].map((widget, index) => (
             <div className="col-lg-3 col-md-6 mb-4" key={index}>
@@ -44,7 +48,7 @@ const AdminDashboard = () => {
                   <p>{widget.description}</p>
                 </div>
                 <div className="card-footer text-center">
-                  <a href="#" className="card-action">
+                  <a href={widget.link} className="card-action">
                     {widget.action}
                   </a>
                 </div>
@@ -60,11 +64,13 @@ const AdminDashboard = () => {
               title: "Manage Editors",
               button: "Manage Users",
               action: "View Editor List",
+              link: "UserManagement",
             },
             {
               title: "Approve Content",
               button: "Approve Pending Articles",
               action: "View Pending Articles",
+              link: "ContentManagement",
             },
           ].map((task, index) => (
             <div className="col-lg-6 col-md-6 mb-4" key={index}>
@@ -74,7 +80,7 @@ const AdminDashboard = () => {
                   <button className="btn btn-primary">{task.button}</button>
                 </div>
                 <div className="card-footer text-center">
-                  <a href="#" className="card-action">
+                  <a href={task.link} className="card-action">
                     {task.action}
                   </a>
                 </div>

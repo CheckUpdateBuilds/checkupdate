@@ -11,7 +11,7 @@ const CreateArticle = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="content-page">
         
         {/* Create Article Form */}
         <form>
