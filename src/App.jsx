@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './pages/Home';
@@ -34,12 +34,12 @@ import EditorsLayout from './layout/EditorsLayout';
 function App() {
   const location = useLocation();
 
-  const isAdminOrEditorPath = location.pathname.startsWith('/admin') && location.pathname.startsWith('/editor');
+  const isAdminOrEditorPath = location.pathname.startsWith('/admin') || location.pathname.startsWith('/editor');
 
   return (
     <div className='overflow-hidden bg-companyWhite '>
       {/* Conditionally render Navbar, Ads, and Footer based on the current path */}
-      {isAdminOrEditorPath && <Navbar />}
+      {!isAdminOrEditorPath && <Navbar />}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -57,7 +57,6 @@ function App() {
         <Route path='/login' element={<LoginSignUp />} />
         <Route path='*' element={<NotFound />} />
 
-        <Route path='/admin' element={<Navigate to="/admin/dashboard" />} /> {/* Redirects /admin to /admin/dashboard */}
         <Route path='Admin' element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
           <Route path="ContentManagement" element={<ContentManagement />} />
@@ -65,8 +64,7 @@ function App() {
           <Route path="Analytics" element={<Analytics />} />
           <Route path="Settings" element={<AdminSettings />} />
         </Route>
-        
-        <Route path='/Editor' element={<Navigate to="/Editor/dashboard" />} />
+
         <Route path='Editor' element={<EditorsLayout />}>
           <Route index element={<EditorsDashboard />} />
           <Route path="Articles" element={<EditorsArticle />} />
@@ -74,8 +72,8 @@ function App() {
           <Route path="CreateArticle" element={<CreateArticle />} />
         </Route>
       </Routes>
-      {isAdminOrEditorPath && <Ads />}
-      {isAdminOrEditorPath && <Footer />}
+      {!isAdminOrEditorPath && <Ads />}
+      {!isAdminOrEditorPath && <Footer />}
     </div>
   );
 }
