@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaTachometerAlt, FaNewspaper, FaEdit, FaChartLine, FaBars, FaBell } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";

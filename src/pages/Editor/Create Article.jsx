@@ -29,10 +29,15 @@ const CreateArticle = () => {
             <label htmlFor="categories">Categories</label>
             <select className="form-control" id="categories" required>
               <option value="" disabled selected>Select a category</option>
-              <option value="Technology">Technology</option>
-              <option value="Science">Science</option>
-              <option value="Health">Health</option>
+              <option value="Science and Technology">Science and Technology</option>
+              <option value="Lifestyle">Lifestyle</option>
               <option value="Business">Business</option>
+              <option value="Earth and Wildlife">Earth and Wildlife</option>
+              <option value="Politics">Politics</option>
+              <option value="Sports">Sports</option>
+              <option value="Opportunities">Opportunities</option>
+              <option value="Education">Education</option>
+              <option value="Entertainment">Entertainment</option>
             </select>
           </div>
 
