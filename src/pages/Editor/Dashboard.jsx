@@ -23,25 +23,25 @@ const EditorDashboard = () => {
               title: "Pending Articles",
               count: 3,
               action: "View Pending Articles",
-              link: "Articles",
+              link: "editor/Articles",
             },
             { 
               title: "Published Articles", 
               count: 15, 
               action: "View Published",
-              link: "Articles",
+              link: "editor/Articles",
             },
             { 
               title: "Draft Articles", 
               count: 5, 
               action: "Edit Drafts",
-              link: "Articles",
+              link: "editor/Articles",
             },
             { 
               title: "Rejected Articles", 
               count: 2, 
               action: "View Rejected",
-              link: "Articles",
+              link: "editor/Articles",
             },
           ].map((widget, index) => (
             <div key={index} className="col-lg-3 col-md-6 mb-4">
@@ -66,13 +66,13 @@ const EditorDashboard = () => {
               title: "Create New Article", 
               buttonText: "Create Article", 
               action: "Start Writing",
-              link: "CreateArticle",
+              link: "editor/CreateArticle",
             },
             { 
               title: "Article Performance", 
               stat: 500, 
               action: "View Performance",
-              link: "ArticlePerformance",
+              link: "editor/ArticlePerformance",
             },
           ].map((task, index) => (
             <div key={index} className="col-lg-6 col-md-6 mb-4">
