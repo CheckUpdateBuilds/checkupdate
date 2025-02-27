@@ -10,7 +10,7 @@ const Sidebar = ({ isCollapsed }) => {
             <div className="container-fluid">
                 <ul className="nav flex-column">
                     <li className="nav-item active">
-                        <Link to={"Dashboard"}><FaTachometerAlt className="icon" /> Dashboard</Link>
+                        <Link to={""}><FaTachometerAlt className="icon" /> Dashboard</Link>
                     </li>
                     <li className="nav-item">
                         <Link to={"Articles"}><FaNewspaper className="icon" /> My Articles</Link>

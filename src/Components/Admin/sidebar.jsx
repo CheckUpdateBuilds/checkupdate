@@ -8,7 +8,7 @@ const Sidebar = ({ isCollapsed }) => {
       <div className="container-fluid">
         <ul className="nav flex-column">
           <li className="nav-item active">
-            <Link to={'Dashboard'}>
+            <Link to={''}>
               <i className="fas fa-tachometer-alt icon"></i>Dashboard
             </Link>
           </li>
