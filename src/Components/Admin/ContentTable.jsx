@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Dropdown } from "react-bootstrap";
 
 const ContentTable = () => {
   const [articles, setArticles] = useState([
@@ -9,6 +10,12 @@ const ContentTable = () => {
 
   const updateStatus = (id, newStatus) => {
     setArticles(articles.map(article => article.id === id ? { ...article, status: newStatus } : article));
+  };
+
+  const handleView = (id) => {
+    // Handle view action (e.g., navigate to a details page or open a modal)
+    console.log(`View article with ID: ${id}`);
+    alert(`Viewing article with ID: ${id}`);
   };
 
   return (
@@ -36,20 +43,35 @@ const ContentTable = () => {
                   {article.status}
                 </span>
               </td>
-              <td className="actions-btns">
-                {article.status === "Pending" && (
-                  <>
-                    <button className="btn btn-success btn-sm" onClick={() => updateStatus(article.id, "Approved")}>
-                      Approve
-                    </button>
-                    <button className="btn btn-danger btn-sm" onClick={() => updateStatus(article.id, "Rejected")}>
-                      Reject
-                    </button>
-                  </>
-                )}
-                <button className="btn btn-secondary btn-sm" onClick={() => updateStatus(article.id, "Archived")}>
-                  Archive
-                </button>
+              <td>
+                {/* 3-Dot Icon with Dropdown Menu */}
+                <Dropdown>
+                  <Dropdown.Toggle variant="link" id="dropdown-actions" className="text-decoration-none">
+                    <i className="bi bi-three-dots-vertical"></i> {/* Bootstrap Icons 3-dot icon */}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {/* View Button */}
+                    <Dropdown.Item onClick={() => handleView(article.id)}>
+                      View
+                    </Dropdown.Item>
+                    {/* Approve Button (only for Pending status) */}
+                    {article.status === "Pending" && (
+                      <Dropdown.Item onClick={() => updateStatus(article.id, "Approved")}>
+                        Approve
+                      </Dropdown.Item>
+                    )}
+                    {/* Reject Button (only for Pending status) */}
+                    {article.status === "Pending" && (
+                      <Dropdown.Item onClick={() => updateStatus(article.id, "Rejected")}>
+                        Reject
+                      </Dropdown.Item>
+                    )}
+                    {/* Archive Button */}
+                    <Dropdown.Item onClick={() => updateStatus(article.id, "Archived")}>
+                      Archive
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </td>
             </tr>
           ))}

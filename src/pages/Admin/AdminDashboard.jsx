@@ -1,6 +1,5 @@
 import React from "react";
-import Sidebar from "../../Components/Admin/sidebar";
-import Header from "../../Components/Admin/Header";
+
 //import "./AdminDashboard.css";
 
 const AdminDashboard = () => {
