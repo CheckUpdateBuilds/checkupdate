@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Ads from '../Components/Ads'
+import Chatbot from "../Components/Chatbot";
 
 
 
@@ -25,6 +26,7 @@ export default function Example() {
             </a>
           </div>
         </div>
+        <Chatbot />
       </main>
     </>
   )

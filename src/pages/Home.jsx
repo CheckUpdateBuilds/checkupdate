@@ -8,7 +8,7 @@ import VideoCard from "../Components/VideoCard";
 import { trendingNewData } from "../trendingNewsData";
 import { VideoNewsData } from "../VideoNewsData";
 import Carousel from "../Components/Carousel";
-// import { Link } from "react-router-dom";
+import Chatbot from "../Components/Chatbot";
 // import LoginSignUp from "../Components/LoginSignUp/LoginSignUp";
 
 
@@ -26,8 +26,8 @@ const Home = () => {
       </div>
 
       <div className="bg-companyWhite font-Nunito md:p-10">
-        <section className="md:w-fit lg:flex md:justify-between md:space-x-12 " >
-          <div className="" >
+        <section className="md:w-fit lg:flex md:justify-between md:space-x-12 ">
+          <div className="">
             <div className="p-2 my-2 text-3xl">
               <p>Top Stories</p>
             </div>
@@ -36,21 +36,21 @@ const Home = () => {
                 <Card2
                   key={index}
                   image={newsData.image}
-                  title={newsData.title}add
+                  title={newsData.title}
+                  add
                   description={newsData.description}
                   subTitle={newsData.subTitle}
                   time={newsData.time}
-                /> 
+                />
               ))}
             </div>
-            <div className="block md:hidden" >
+            <div className="block md:hidden">
               <Ads />
             </div>
           </div>
-          
 
-          <div className=" lg:w-1/2 md:ml-[16px] md:mt-[120px] " >
-           <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
+          <div className=" lg:w-1/2 md:ml-[16px] md:mt-[120px] ">
+            <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
               <p>Most Watched This Week</p>
             </div>
             <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
@@ -64,33 +64,32 @@ const Home = () => {
                 />
               ))}
             </div>
-            <div className="" >
+            <div className="">
               <Ads />
             </div>
           </div>
         </section>
 
-        <section className="md:w-fit lg:flex md:justify-between md:space-x-12 " >
-
-          <div className="block md:ml-[16px] lg:hidden" >
-              <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
-                <p>Recommended For You</p>
-              </div>
-              <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
-                {VideoNewsData.slice(0, 4).map((VidData, index) => (
-                  <NewsCardOne
-                    key={index}
-                    image={VidData.image}
-                    title={VidData.title}
-                    description={VidData.description}
-                    time={VidData.time}
-                  />
-                ))}
-              </div>
+        <section className="md:w-fit lg:flex md:justify-between md:space-x-12 ">
+          <div className="block md:ml-[16px] lg:hidden">
+            <div className="text-xl text-center font-bold font-Nunito ml-5 pt-3">
+              <p>Recommended For You</p>
+            </div>
+            <div className="p-3 bg-companyLightRed rounded-3xl mt-10 ">
+              {VideoNewsData.slice(0, 4).map((VidData, index) => (
+                <NewsCardOne
+                  key={index}
+                  image={VidData.image}
+                  title={VidData.title}
+                  description={VidData.description}
+                  time={VidData.time}
+                />
+              ))}
+            </div>
             <Ads />
           </div>
 
-          <div className="" >
+          <div className="">
             <div className="p-2 my-2 text-3xl">
               <p>Latest Stories</p>
             </div>
@@ -108,7 +107,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-1/2 lg:ml-[46px] lg:-mt-[0px] " >
+          <div className="hidden lg:block lg:w-1/2 lg:ml-[46px] lg:-mt-[0px] ">
             <div className="text-xl font-bold font-Nunito ml-5 w-1/2 ">
               <p>Recommended For You</p>
             </div>
@@ -126,18 +125,17 @@ const Home = () => {
             <div>
               <Ads />
             </div>
-            <div className="rounded-3xl" >
+            <div className="rounded-3xl">
               <Subscribe />
             </div>
           </div>
-
-
-
         </section>
-        
-          <div className="lg:hidden" >
-            <Subscribe />
-          </div>
+
+        <Chatbot />
+
+        <div className="lg:hidden">
+          <Subscribe />
+        </div>
       </div>
     </>
   );

@@ -30,6 +30,7 @@ import ArticlePerformance from './pages/Editor/Article Performance';
 import CreateArticle from './pages/Editor/Create Article';
 import AdminLayout from './layout/AdminLayout';
 import EditorsLayout from './layout/EditorsLayout';
+import ChatPage from './pages/ChatPage';
 
 function App() {
   const location = useLocation();
@@ -55,6 +56,7 @@ function App() {
         <Route path='/opportunities' element={<Opportunities />} />
         <Route path='/awards' element={<CheckUpdateAwards />} />
         <Route path='/login' element={<LoginSignUp />} />
+        <Route path='/chat' element={<ChatPage />} />
         <Route path='*' element={<NotFound />} />
 
         <Route path='Admin' element={<AdminLayout />}>

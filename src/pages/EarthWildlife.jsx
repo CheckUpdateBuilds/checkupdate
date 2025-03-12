@@ -6,6 +6,7 @@ import Subscribe from "../Components/Subscribe";
 import VideoCard from "../Components/VideoCard";
 import { trendingNewData } from "../trendingNewsData";
 import { VideoNewsData } from "../VideoNewsData";
+import Chatbot from "../Components/Chatbot";
 
 import InnerNavbar from "../Components/InnerNavbar"
 
@@ -149,7 +150,9 @@ const EarthWildlife = () => {
             </div>
           </div>
 
-      </section>
+        </section>
+        
+        <Chatbot />
 
         
           
