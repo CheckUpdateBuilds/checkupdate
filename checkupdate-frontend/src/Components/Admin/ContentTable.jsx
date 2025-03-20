@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dropdown } from "react-bootstrap";
+import { Modal, Button, Dropdown } from "react-bootstrap";  // Importing the necessary components
 
 const ContentTable = () => {
   const [articles, setArticles] = useState([
@@ -8,14 +8,21 @@ const ContentTable = () => {
     { id: 3, title: "CSS Grid Layout Guide", author: "Wale Johnson", submittedOn: "2025-01-08", status: "Rejected" },
   ]);
 
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
   const updateStatus = (id, newStatus) => {
     setArticles(articles.map(article => article.id === id ? { ...article, status: newStatus } : article));
   };
 
-  const handleView = (id) => {
-    // Handle view action (e.g., navigate to a details page or open a modal)
-    console.log(`View article with ID: ${id}`);
-    alert(`Viewing article with ID: ${id}`);
+  const handleView = (article) => {
+    setSelectedArticle(article);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedArticle(null);
   };
 
   return (
@@ -43,30 +50,28 @@ const ContentTable = () => {
                   {article.status}
                 </span>
               </td>
-              <td>
-                {/* 3-Dot Icon with Dropdown Menu */}
-                <Dropdown>
-                  <Dropdown.Toggle variant="link" id="dropdown-actions" className="text-decoration-none">
-                    <i className="bi bi-three-dots-vertical"></i> {/* Bootstrap Icons 3-dot icon */}
+              <td className="actions-btns">
+                {/* Dot Icon for Actions */}
+                <Dropdown align="end">
+                  <Dropdown.Toggle variant="link" className="btn-sm" id={`dropdown-${article.id}`}>
+                    ⋮
                   </Dropdown.Toggle>
+
                   <Dropdown.Menu>
                     {/* View Button */}
-                    <Dropdown.Item onClick={() => handleView(article.id)}>
+                    <Dropdown.Item onClick={() => handleView(article)}>
                       View
                     </Dropdown.Item>
-                    {/* Approve Button (only for Pending status) */}
                     {article.status === "Pending" && (
-                      <Dropdown.Item onClick={() => updateStatus(article.id, "Approved")}>
-                        Approve
-                      </Dropdown.Item>
+                      <>
+                        <Dropdown.Item onClick={() => updateStatus(article.id, "Approved")}>
+                          Approve
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => updateStatus(article.id, "Rejected")}>
+                          Reject
+                        </Dropdown.Item>
+                      </>
                     )}
-                    {/* Reject Button (only for Pending status) */}
-                    {article.status === "Pending" && (
-                      <Dropdown.Item onClick={() => updateStatus(article.id, "Rejected")}>
-                        Reject
-                      </Dropdown.Item>
-                    )}
-                    {/* Archive Button */}
                     <Dropdown.Item onClick={() => updateStatus(article.id, "Archived")}>
                       Archive
                     </Dropdown.Item>
@@ -77,6 +82,23 @@ const ContentTable = () => {
           ))}
         </tbody>
       </table>
+
+      {/* Modal for Viewing Article Details */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedArticle?.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p><strong>Author:</strong> {selectedArticle?.author}</p>
+          <p><strong>Submitted On:</strong> {selectedArticle?.submittedOn}</p>
+          <p><strong>Status:</strong> {selectedArticle?.status}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
