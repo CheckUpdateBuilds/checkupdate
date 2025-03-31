@@ -1,13 +1,13 @@
 // import React from 'react'
 // import Card from "../Components/Card";
-import Card2 from "../components/Card2";
-import Ads from "../components/Ads";
-import Subscribe from "../components/Subscribe";
-import NewsCardOne from "../components/NewsCardOne";
-import VideoCard from "../components/VideoCard";
-import { trendingNewData } from "./trendingNewsData";
-import { VideoNewsData } from "./VideoNewsData";
-import Carousel from "../components/Carousel";
+import Card2 from "../../components/Card2";
+import Ads from "../../components/Ads";
+import Subscribe from "../../components/Subscribe";
+import NewsCardOne from "../../components/NewsCardOne";
+import VideoCard from "../../components/VideoCard";
+import { trendingNewData } from "../trendingNewsData";
+import { VideoNewsData } from "../VideoNewsData";
+import Carousel from "../../components/Carousel";
 // import { Link } from "react-router-dom";
 // import LoginSignUp from "../Components/LoginSignUp/LoginSignUp";
 
