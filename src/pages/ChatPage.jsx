@@ -5,7 +5,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Ensure to replace this with a secure method to store API keys
-const API_KEY_3 = "AIzaSyAqSymOzxCPMBV-R_1f2yYvIzsjrBIb5RU";
+const API_KEY_3 = import.meta.env.VITE_GEMINI_API_KEY_3;
 
 const ChatPage = () => {
     const genAI = new GoogleGenerativeAI(API_KEY_3);
@@ -90,10 +90,10 @@ const ChatPage = () => {
 
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
-            <div className="relative h-[80vh] w-[90vw] max-w-[700px] bg-white shadow-lg overflow-hidden">
+            <div className="relative h-[80vh] w-[90vw] max-w-[700px] bg-white shadow-md overflow-hidden">
                 <MainContainer>
-                    <ChatContainer className="" >
-                        <MessageList
+                    <ChatContainer className="p-2 " >
+                        <MessageList className="overflow-auto  "
                             scrollBehavior="smooth"
                             typingIndicator={
                                 isTyping ? (
