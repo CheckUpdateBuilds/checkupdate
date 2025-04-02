@@ -1,12 +1,17 @@
 // import React from 'react'
 import companyLogo from '../assets/logo4.svg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { MdArrowUpward } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
+
 const Footer = () => {
+  const location = useLocation();
+    if (location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/chat' ) {
+        return null; // Don't render the footer on these pages
+    }
   return (
     <>
     

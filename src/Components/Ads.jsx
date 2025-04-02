@@ -1,6 +1,12 @@
 // import React from 'react'
+import { useLocation } from 'react-router-dom'
+
 
 const Ads = () => {
+  const location = useLocation();
+      if (location.pathname === '/chat') {
+          return null; // Don't render the footer on these pages
+      }
   return (
     <>
       <div className="block lg:hidden bg-companyLightRed font-Nunito md:pt-[unset]">
