@@ -1,6 +1,5 @@
 // import React from 'react'
-import companyLogo from '../assets/logo4.svg'
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { MdArrowUpward } from "react-icons/md";
@@ -12,7 +11,7 @@ const Footer = () => {
     
         <div className="bg-black h-[700px] lg:h-96 font-Nunito lg:px-12 ">
           <div className="pt-6 pl-4 lg:pt-6 lg:pl-9 flex justify-between">
-            <Link to={'/'} ><img className="w-[100px] " src={companyLogo} alt="CheckUpdate Logo" /></Link>
+            <Link href='/' ><img className="w-[100px] " src="/assets/logo4.svg" alt="CheckUpdate Logo" /></Link>
             <a className="flex text-white underline" href="#">Back to top <MdArrowUpward className="w-6 h-6"/> </a>
           </div>
 
@@ -24,18 +23,18 @@ const Footer = () => {
               <p className="text-xl font-bold p-1 text-center">Our Company</p>
 
               <div className="text-sm text-center">
-                <Link className="pr-3" to={'#'} >About Us</Link>
-                <Link to={'#'} >Privacy Policy</Link>
+                <Link className="pr-3" href='#' >About Us</Link>
+                <Link href='#' >Privacy Policy</Link>
               </div>
               
               <div className="text-sm text-center">
-                <Link to={'#'} className="pr-3" >Help & Support</Link>
-                <Link to={'#'}  >Terms of Service</Link>
+                <Link href='#' className="pr-3" >Help & Support</Link>
+                <Link href='#'  >Terms of Service</Link>
               </div>
 
               <div className="text-sm text-center">
-                <Link to={'#'} className="pr-3" >Contact Us</Link>
-                <Link to={'#'} >Vacancy</Link>
+                <Link href='#' className="pr-3" >Contact Us</Link>
+                <Link href='#' >Vacancy</Link>
               </div>
             
             </div>
@@ -44,24 +43,24 @@ const Footer = () => {
               <div className="text-xl font-bold p-1 text-center">Category</div>
 
               <div className="block text-center lg:flex">
-                <Link to={'/'} className="pr-3 mx-auto " >News</Link>
-                <Link to={'/education'} className="pr-3 mx-auto" >Education</Link>
-                <Link to={'/business'} className="pr-3 mx-auto " >Business</Link>
-                <Link to={'/earth'} className="" >Earth & Wildlife</Link>
+                <Link href='/' className="pr-3 mx-auto " >News</Link>
+                <Link href='/education' className="pr-3 mx-auto" >Education</Link>
+                <Link href='/business' className="pr-3 mx-auto " >Business</Link>
+                <Link href='/earth' className="" >Earth & Wildlife</Link>
               </div>
 
               <div className="text-center block lg:flex mt-2">
-                <Link to={'/sports'} className="pr-3 mx-auto" >Sports</Link>
-                <Link to={'/lifestyle'} className="pr-3 mx-auto" >Lifestyle</Link>
-                <Link to={'/science'} className="pr-3 mx-auto" >Science & Tech</Link>
-                <Link to={'/opportunities'} className="mx-auto" >Opportunities</Link>
+                <Link href='/sports' className="pr-3 mx-auto" >Sports</Link>
+                <Link href='/lifestyle' className="pr-3 mx-auto" >Lifestyle</Link>
+                <Link href='/science' className="pr-3 mx-auto" >Science & Tech</Link>
+                <Link href='/opportunities' className="mx-auto" >Opportunities</Link>
               </div>
               
               <div className="text-center block lg:flex mt-2">
-                <Link to={'/entertainment'} className="pr-3" >Entertainment</Link>
-                <Link to={'/politics'} className=" mr-2" >Politics</Link>
-                <Link to={'/culture'} className="mr-2" >Culture & Religion</Link>
-                <Link to={'/awards'} className="" >CheckUpdate Awards</Link>
+                <Link href='/entertainment' className="pr-3" >Entertainment</Link>
+                <Link href='/politics' className=" mr-2" >Politics</Link>
+                <Link href='/culture' className="mr-2" >Culture & Religion</Link>
+                <Link href='/awards' className="" >CheckUpdate Awards</Link>
               </div>
             </div>
 
@@ -98,9 +97,9 @@ const Footer = () => {
             </div>
           </section>
 
-          <div className="text-white text-center mt-20">
-            <FontAwesomeIcon icon={faCopyright} />
-             CheckUpdate 2024
+          <div className="text-white text-center mt-10 w-5 "> 
+            <span><FontAwesomeIcon icon={faCopyright} /></span>
+            CheckUpdate 2024
           </div>
 
           

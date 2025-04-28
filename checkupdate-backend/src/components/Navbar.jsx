@@ -1,8 +1,9 @@
+'use client'
 import { useEffect, useState } from "react";
 import { MdOutlineSearch } from "react-icons/md";
 import { BiMenuAltLeft, BiX } from "react-icons/bi"; // Import BiX icon
-import { Link } from "react-router-dom";
-import companyLogo2 from "../assets/logo4.svg";
+import  Link  from "next/link";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,9 @@ const Navbar = () => {
           isOpen ? "bg-companyRed" : ""
         } navbar`}>
         <div className="flex flex-wrap justify-between items-center ">
-          <Link to={"/"}>
+          <Link href="/">
             <img
-              src={companyLogo2}
+              src="/assets/logo4.svg"
               alt="company logo"
               className="h-20 w-20 ml-8 lg:h-16 lg:w-40 lg:ml-8"
             />
@@ -55,7 +56,7 @@ const Navbar = () => {
               className="w-full lg:w-[400px] pl-10 pr-4 py-2 h-10 bg-transparent ring-companyWhite ring-1 ring-inset rounded-3xl text-white"
             />
             <button className="bg-companyWhite text-center hidden lg:block w-20 h-10 lg:mr-[10px] text-companyRed rounded-3xl hover:bg-slate-200 ">
-              <Link to={"login"}> Sign in </Link>
+              <Link href="login"> Sign in </Link>
             </button>
           </div>
         </div>
@@ -78,7 +79,7 @@ const Navbar = () => {
             />
           </div>
           <button className="bg-companyWhite text-center w-[75px] h-[35px] mr-[10px] lg:hidden text-companyRed rounded-3xl hover:bg-slate-200 ">
-            <Link to={"login"}> Sign in </Link>
+            <Link href="login"> Sign in </Link>
           </button>
         </div>
 
@@ -93,7 +94,7 @@ const Navbar = () => {
               <ul className="flex flex-col font-medium mt-4 rounded-lg lg:flex-row lg:space-x-5 lg:mt-0 lg:ml-10 lg:mr-10 lg:border-0 lg:bg-transparent ">
                 <li>
                   <Link
-                    to={"/"}
+                    href="/"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     News
@@ -101,7 +102,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/sports"}
+                    href="/sports"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Sports
@@ -109,7 +110,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/entertainment"}
+                    href="/entertainment"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Entertainment
@@ -117,7 +118,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/education"}
+                    href="/education"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Education
@@ -125,7 +126,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/lifestyle"}
+                    href="/lifestyle"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Lifestyle
@@ -133,7 +134,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/politics"}
+                    href="/politics"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Politics
@@ -141,7 +142,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/business"}
+                    href="/business"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Business
@@ -149,7 +150,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/science"}
+                    href="/science"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Science & Tech
@@ -157,7 +158,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/culture"}
+                    href="/culture"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Culture & Religion
@@ -165,7 +166,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/earth"}
+                    href="/earth"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Earth & Wildlife
@@ -173,7 +174,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/opportunities"}
+                    href="/opportunities"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     Opportunities
@@ -181,7 +182,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/awards"}
+                    href="/awards"
                     className="block py-2 px-[1px] text-end text-xs lg:text-sm text-white hover:bg-companyOrange lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                   >
                     CheckUpdate Awards
@@ -203,7 +204,7 @@ const Navbar = () => {
             <ul className="flex flex-col font-medium mt-4 rounded-lg lg:flex-row lg:space-x-5 lg:mt-0 lg:ml-10 lg:mr-10 lg:border-0 lg:bg-transparent ">
               <li>
                 <Link
-                  to={"/"}
+                  href="/"
                   className="block py-2 px-[1px] ml-[142px] w-[50px] text-xs text-end lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   News
@@ -211,7 +212,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/sports"}
+                  href="/sports"
                   className="block py-2 px-[1px] ml-[142px] w-[50px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Sports
@@ -219,7 +220,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/entertainment"}
+                  href="/entertainment"
                   className="block py-2 px-[1px] ml-[92px] w-[100px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Entertainment
@@ -227,7 +228,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/education"}
+                  href="/education"
                   className="block py-2 px-[1px] ml-[112px] w-[80px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Education
@@ -235,7 +236,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/lifestyle"}
+                  href="/lifestyle"
                   className="block py-2 px-[1px] ml-[130px] w-[60px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Lifestyle
@@ -243,7 +244,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/politics"}
+                  href="/politics"
                   className="block py-2 px-[1px] ml-[140px] w-[50px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Politics
@@ -251,7 +252,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/business"}
+                  href="/business"
                   className="block py-2 px-[1px] ml-[122px] w-[70px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Business
@@ -259,7 +260,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/science"}
+                  href="/science"
                   className="block py-2 px-[1px] ml-[80px] w-[110px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Science & Tech
@@ -267,7 +268,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/culture"}
+                  href="/culture"
                   className="block py-2 px-[1px] ml-[48px] w-[140px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Culture & Religion
@@ -275,7 +276,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/earth"}
+                  href="/earth"
                   className="block py-2 px-[1px] ml-[67px] w-[120px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Earth & Wildlife
@@ -283,7 +284,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/opportunities"}
+                  href="/opportunities"
                   className="block py-2 px-[1px] ml-[75px] w-[110px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   Opportunities
@@ -291,7 +292,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to={"/awards"}
+                  href="/awards"
                   className="block py-2 mb-2 px-[1px] ml-[24px] w-[160px] text-end text-xs lg:text-sm text-white hover:border-b-2 hover:text-base lg:hover:bg-transparent dark:text-white lg:hover:border-b-2 lg:hover:border-white-700 lg:hover:pb-2"
                 >
                   CheckUpdate Awards

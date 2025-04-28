@@ -1,10 +1,11 @@
-'use client'
+'use client';
 import { useState } from 'react';
 import Sidebar from '../../components/Admin/sidebar';
 import Header from '../../components/Admin/Header';
-//import './adminLayout.css'; // If you have specific styles for the Admin layout
 
-export default function AdminLayout({ children }) {
+//import './adminLayout.css'; // 
+
+export default function AdminLayout({ children}) {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
 
   const toggleSidebar = () => {
@@ -12,19 +13,23 @@ export default function AdminLayout({ children }) {
   };
 
   return (
-    <div className="admin-settings">
-      {/* Sidebar */}
-      <Sidebar isCollapsed={isSidebarCollapsed} />
+   
+      <body>
+        <div className="admin-settings">
+          {/* Sidebar */}
+          <Sidebar isCollapsed={isSidebarCollapsed} />
 
-      <div className="content">
-        {/* Header */}
-        <Header toggleSidebar={toggleSidebar} />
+          <div className="content">
+            {/* Header */}
+            <Header toggleSidebar={toggleSidebar} />
 
-        {/* Child pages rendered here */}
-        <div className="main-content">
-          {children}
+            {/* Child pages rendered here */}
+            <div className="main-content">
+              {children}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </body>
+    
   );
 }

@@ -17,12 +17,12 @@ const AdminLayout = ({children}) => {
         <div className="editors-settings">
             <Sidebar isCollapsed={isSidebarCollapsed} />
             <div className="content">
-            <Header toggleSidebar={toggleSidebar} />
+                <Header toggleSidebar={toggleSidebar} />
                 <div>
                 {children}
                 </div>
             </div> 
-  </div>
+        </div>
     )
 }
 
