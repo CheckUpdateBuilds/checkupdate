@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CheckUpdate — Coming Soon</title>
+    <link rel="icon" type="image/svg+xml" href="/logo1.svg" />
+    <meta
+      name="description"
+      content="CheckUpdate is coming soon. Stay tuned for updates."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --card: #121821;
+        --text: #e6edf3;
+        --muted: #9aa7b3;
+        --accent: #0ea5e9;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(
+            1200px 800px at 80% -20%,
+            rgba(14, 165, 233, 0.12),
+            transparent 60%
+          ),
+          radial-gradient(
+            1000px 600px at -10% 120%,
+            rgba(16, 185, 129, 0.08),
+            transparent 50%
+          ),
+          var(--bg);
+        display: grid;
+        place-items: center;
+      }
+      .wrap {
+        width: min(680px, 92vw);
+        text-align: center;
+        padding: 48px 28px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(6px);
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        color: var(--text);
+        text-decoration: none;
+      }
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
+      h1 {
+        margin: 8px 0 12px;
+        font-size: clamp(28px, 4vw, 40px);
+        line-height: 1.1;
+      }
+      p {
+        margin: 0 auto 22px;
+        color: var(--muted);
+        max-width: 52ch;
+      }
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(14, 165, 233, 0.12);
+        color: var(--accent);
+        border: 1px solid rgba(14, 165, 233, 0.32);
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+      .cta {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        appearance: none;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        padding: 10px 16px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: transform 0.15s ease, border-color 0.15s ease,
+          background 0.15s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.28);
+      }
+      .btn.primary {
+        background: linear-gradient(
+          180deg,
+          rgba(14, 165, 233, 0.22),
+          rgba(14, 165, 233, 0.12)
+        );
+        border-color: rgba(14, 165, 233, 0.44);
+      }
+      footer {
+        margin-top: 26px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap" role="main">
+      <a class="brand" href="/" aria-label="CheckUpdate home">
+        <img src="/logo1.svg" alt="CheckUpdate logo" />
+        <strong>CheckUpdate</strong>
+      </a>
+      <div class="badge" aria-hidden="true">Coming Soon</div>
+      <h1>We’re building something great</h1>
+      <p>
+        Our full experience is on the way. In the meantime, this placeholder
+        page is live while we put the finishing touches on the app.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:hello@checkupdate.com"
+          >Contact us</a
+        >
+        <a
+          class="btn"
+          href="https://github.com/CheckUpdateBuilds/checkupdate"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </div>
+      <footer>
+        © <span id="year"></span> CheckUpdate. All rights reserved.
+      </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
